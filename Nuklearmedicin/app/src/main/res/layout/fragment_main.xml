@@ -33,7 +33,9 @@
             android:text="Före"
             android:id="@+id/buttonBefore"
             android:layout_gravity="center_horizontal"
-            android:onClick="mainFragmentButtonClick" />
+            android:onClick="mainFragmentButtonClick"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#87d6ef"/>
 
         <Button
             android:layout_width="281dp"
@@ -41,7 +43,8 @@
             android:text="Under"
             android:id="@+id/buttonDuring"
             android:layout_gravity="center_horizontal"
-            android:onClick="mainFragmentButtonClick" />
+            android:onClick="mainFragmentButtonClick"
+            android:backgroundTint="#87d6ef" />
 
         <Button
             android:layout_width="281dp"
@@ -49,7 +52,8 @@
             android:text="Efter"
             android:id="@+id/buttonAfter"
             android:layout_gravity="center_horizontal"
-            android:onClick="mainFragmentButtonClick" />
+            android:onClick="mainFragmentButtonClick"
+            android:backgroundTint="#87d6ef"/>
     </LinearLayout>
 
 </FrameLayout>
