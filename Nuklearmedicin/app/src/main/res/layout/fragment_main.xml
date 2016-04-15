@@ -26,5 +26,27 @@
             android:id="@+id/textView6"
             android:layout_gravity="center_horizontal"
             android:paddingTop="10dp" />
+
+        <Button
+            android:layout_width="281dp"
+            android:layout_height="104dp"
+            android:text="Före"
+            android:id="@+id/buttonBefore"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="281dp"
+            android:layout_height="104dp"
+            android:text="Under"
+            android:id="@+id/buttonDuring"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="281dp"
+            android:layout_height="104dp"
+            android:text="Efter"
+            android:id="@+id/buttonAfter"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
+
 </FrameLayout>
