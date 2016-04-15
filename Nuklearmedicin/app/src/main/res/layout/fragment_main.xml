@@ -32,21 +32,24 @@
             android:layout_height="104dp"
             android:text="Före"
             android:id="@+id/buttonBefore"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="mainFragmentButtonClick" />
 
         <Button
             android:layout_width="281dp"
             android:layout_height="104dp"
             android:text="Under"
             android:id="@+id/buttonDuring"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="mainFragmentButtonClick" />
 
         <Button
             android:layout_width="281dp"
             android:layout_height="104dp"
             android:text="Efter"
             android:id="@+id/buttonAfter"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="mainFragmentButtonClick" />
     </LinearLayout>
 
 </FrameLayout>

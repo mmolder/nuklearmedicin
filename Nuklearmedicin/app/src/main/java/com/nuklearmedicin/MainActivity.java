@@ -15,7 +15,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.nuklearmedicin.fragments.AfterFragment;
+import com.nuklearmedicin.fragments.BeforeFragment;
 import com.nuklearmedicin.fragments.ContactFragment;
+import com.nuklearmedicin.fragments.DuringFragment;
 import com.nuklearmedicin.fragments.MainFragment;
 import com.nuklearmedicin.fragments.RestrictionFragment;
 import com.nuklearmedicin.fragments.SettingsFragment;
@@ -115,5 +118,22 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    /* Handle button clicks */
+    public void mainFragmentButtonClick(View view) {
+        FragmentManager fm = getSupportFragmentManager();
+
+        switch(view.getId()) {
+            case R.id.buttonBefore:
+                fm.beginTransaction().replace(R.id.content_frame, new BeforeFragment()).commit();
+                break;
+            case R.id.buttonDuring:
+                fm.beginTransaction().replace(R.id.content_frame, new DuringFragment()).commit();
+                break;
+            case R.id.buttonAfter:
+                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                break;
+        }
     }
 }
