@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent" android:layout_height="fill_parent"
-    android:background="#bcbcbc">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
     <LinearLayout
         android:orientation="vertical"
@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Nuklearmedicin"
+            android:textSize="35dp"
             android:id="@+id/textView2"
             android:layout_gravity="center_horizontal"
             android:paddingTop="50dp" />
@@ -31,29 +32,35 @@
             android:layout_width="281dp"
             android:layout_height="104dp"
             android:text="Före"
+            android:textSize="25dp"
             android:id="@+id/buttonBefore"
             android:layout_gravity="center_horizontal"
             android:onClick="mainFragmentButtonClick"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#87d6ef"/>
+            android:backgroundTint="#b2d5e0"
+            />
 
         <Button
             android:layout_width="281dp"
             android:layout_height="104dp"
             android:text="Under"
+            android:textSize="32dp"
+            android:textColor="#FFFFFF"
             android:id="@+id/buttonDuring"
             android:layout_gravity="center_horizontal"
             android:onClick="mainFragmentButtonClick"
-            android:backgroundTint="#87d6ef" />
+            android:backgroundTint="#005883" />
 
         <Button
             android:layout_width="281dp"
             android:layout_height="104dp"
             android:text="Efter"
+            android:textSize="35dp"
+            android:textColor="#FFFFFF"
             android:id="@+id/buttonAfter"
             android:layout_gravity="center_horizontal"
             android:onClick="mainFragmentButtonClick"
-            android:backgroundTint="#87d6ef"/>
+            android:backgroundTint="#004169"/>
     </LinearLayout>
 
 </FrameLayout>
