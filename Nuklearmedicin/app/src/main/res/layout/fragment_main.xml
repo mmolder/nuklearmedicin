@@ -36,9 +36,10 @@
             android:id="@+id/buttonBefore"
             android:layout_gravity="center_horizontal"
             android:onClick="mainFragmentButtonClick"
-            android:layout_marginTop="20dp"
             android:backgroundTint="#b2d5e0"
-            />
+            android:background="@drawable/button_corners"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp" />
 
         <Button
             android:layout_width="281dp"
@@ -49,7 +50,9 @@
             android:id="@+id/buttonDuring"
             android:layout_gravity="center_horizontal"
             android:onClick="mainFragmentButtonClick"
-            android:backgroundTint="#005883" />
+            android:backgroundTint="#005883"
+            android:background="@drawable/button_corners"
+            android:layout_marginBottom="10dp" />
 
         <Button
             android:layout_width="281dp"
@@ -60,7 +63,8 @@
             android:id="@+id/buttonAfter"
             android:layout_gravity="center_horizontal"
             android:onClick="mainFragmentButtonClick"
-            android:backgroundTint="#004169"/>
+            android:backgroundTint="#004169"
+            android:background="@drawable/button_corners"/>
     </LinearLayout>
 
 </FrameLayout>
