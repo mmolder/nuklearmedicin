@@ -1,5 +1,6 @@
 package com.nuklearmedicin;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.nuklearmedicin.fragments.AfterFragment;
 import com.nuklearmedicin.fragments.BeforeFragment;
@@ -59,6 +61,14 @@ public class MainActivity extends AppCompatActivity
 
         /* Hide the title on the action bar */
         getSupportActionBar().setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
+
+        TextView tv1 = (TextView)findViewById(R.id.buttonBefore);
+        TextView tv2 = (TextView)findViewById(R.id.buttonDuring);
+        TextView tv3 = (TextView)findViewById(R.id.buttonAfter);
+        Typeface face = Typeface.createFromAsset(getAssets(),"fonts/Existence-Light.otf");
+        tv1.setTypeface(face);
+        tv2.setTypeface(face);
+        tv3.setTypeface(face);
     }
 
     @Override
