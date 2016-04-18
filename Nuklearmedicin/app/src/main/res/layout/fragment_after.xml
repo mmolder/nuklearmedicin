@@ -4,8 +4,8 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal|top">
 
         <TextView
@@ -16,36 +16,47 @@
             android:id="@+id/textView11"
             android:layout_gravity="center_horizontal"
             android:paddingTop="10dp" />
-
-        <!-- activity_info layout file -->
-        <!-- Clickable title -->
-        <TextView  android:id="@+id/rest_1"
-            android:text="Lorem ipsum dolor sit amet"
-            android:clickable="true"
-            android:onClick="toggle_contents"
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:textSize="30dp" />
-        <!--content to hide/show -->
-        <TextView  android:id="@+id/rest_1_content"
-            android:text="Lorem ipsum dolor sit amet, summo comprehensam est id. Mea viris saperet minimum te, tibique omittam incorrupte est ad, veniam nostrum ei duo. Ne est solum idque sadipscing, elitr fierent concludaturque id vix. Ius et solum nostro volutpat.  Id quo wisi animal. Ut ius exerci quidam timeam, ut est postea ponderum delicata, odio elit bonorum sed in. Cu vim reque aeque aliquam, mel ea cibo malorum inciderint. Eu nec labore consulatu urbanitas, qui accumsan offendit id, debitis impedit democritum sed ut.  Eos commodo maiorum te. Vocent oporteat cu eum, mel tale iisque gloriatur ea. Id usu virtute ornatus. Eam cu cibo sonet. An his illud indoctum, nec ne falli ocurreret. Tempor denique no has, eam te erant signiferumque. "
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:textSize="20dp" />
-        <!-- activity_info layout file -->
-        <!-- Clickable title -->
-        <TextView  android:id="@+id/rest_2"
-            android:text="Lorem ipsum dolor sit amet2"
-            android:clickable="true"
-            android:onClick="toggle_contents"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:textSize="30dp" />
-        <!--content to hide/show -->
-        <TextView  android:id="@+id/rest_2_content"
-            android:text="Lorem ipsum dolor sit amet1234. "
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:textSize="20dp" />
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- activity_info layout file -->
+                <!-- Clickable title -->
+                <TextView  android:id="@+id/rest_1"
+                    android:text="Lorem ipsum dolor sit amet"
+                    android:clickable="true"
+                    android:onClick="toggle_contents"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="30dp" />
+                <!--content to hide/show -->
+                <TextView  android:id="@+id/rest_1_content"
+                    android:text="Lorem ipsum dolor sit amet, summo comprehensam est id. Mea viris saperet minimum te, tibique omittam incorrupte est ad, veniam nostrum ei duo. Ne est solum idque sadipscing, elitr fierent concludaturque id vix. Ius et solum nostro volutpat.  Id quo wisi animal. Ut ius exerci quidam timeam, ut est postea ponderum delicata, odio elit bonorum sed in. Cu vim reque aeque aliquam, mel ea cibo malorum inciderint. Eu nec labore consulatu urbanitas, qui accumsan offendit id, debitis impedit democritum sed ut.  Eos commodo maiorum te. Vocent oporteat cu eum, mel tale iisque gloriatur ea. Id usu virtute ornatus. Eam cu cibo sonet. An his illud indoctum, nec ne falli ocurreret. Tempor denique no has, eam te erant signiferumque. "
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="20dp" />
+                <!-- activity_info layout file -->
+                <!-- Clickable title -->
+                <TextView  android:id="@+id/rest_2"
+                    android:text="Lorem ipsum dolor sit amet2"
+                    android:clickable="true"
+                    android:onClick="toggle_contents"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="30dp" />
+                <!--content to hide/show -->
+                <TextView  android:id="@+id/rest_2_content"
+                    android:text="Lorem ipsum dolor sit amet1234. "
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </FrameLayout>

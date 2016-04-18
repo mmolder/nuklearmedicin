@@ -175,6 +175,7 @@ public class MainActivity extends AppCompatActivity
                     slide_down(this, rest_2_content);
                 }
                 break;
+            /* TODO : fix rest of button presses */
             /*case R.id.rest_3:
                 break;
             case R.id.rest_4:
