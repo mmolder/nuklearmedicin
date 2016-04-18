@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.nuklearmedicin.fragments.AfterFragment;
@@ -24,6 +25,8 @@ import com.nuklearmedicin.fragments.DuringFragment;
 import com.nuklearmedicin.fragments.MainFragment;
 import com.nuklearmedicin.fragments.RestrictionFragment;
 import com.nuklearmedicin.fragments.SettingsFragment;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -62,13 +65,9 @@ public class MainActivity extends AppCompatActivity
         /* Hide the title on the action bar */
         getSupportActionBar().setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
 
-        TextView tv1 = (TextView)findViewById(R.id.buttonBefore);
-        TextView tv2 = (TextView)findViewById(R.id.buttonDuring);
-        TextView tv3 = (TextView)findViewById(R.id.buttonAfter);
-        Typeface face = Typeface.createFromAsset(getAssets(),"fonts/Existence-Light.otf");
-        tv1.setTypeface(face);
-        tv2.setTypeface(face);
-        tv3.setTypeface(face);
+        /*TextView but1 = (TextView) findViewById(R.id.textView11);
+        Typeface face = Typeface.createFromAsset(getAssets(),"fonts/myfont.ttf");
+        but1.setTypeface(face);*/
     }
 
     @Override
