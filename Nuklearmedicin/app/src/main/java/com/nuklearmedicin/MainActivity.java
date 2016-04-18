@@ -1,5 +1,6 @@
 package com.nuklearmedicin;
 
+import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -129,7 +132,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    /* Handle button clicks */
+    /* handle button clicks from main fragment */
     public void mainFragmentButtonClick(View view) {
         FragmentManager fm = getSupportFragmentManager();
 
@@ -143,6 +146,64 @@ public class MainActivity extends AppCompatActivity
             case R.id.buttonAfter:
                 fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
                 break;
+        }
+    }
+
+    /* handle button clicks from after fragment */
+    public void toggle_contents(View v){
+        switch(v.getId()){
+            case R.id.rest_1:
+                TextView rest_1_content = (TextView) findViewById(R.id.rest_1_content);
+                if(rest_1_content.isShown()){
+                    slide_up(this, rest_1_content);
+                    rest_1_content.setVisibility(View.GONE);
+                }
+                else{
+                    rest_1_content.setVisibility(View.VISIBLE);
+                    slide_down(this, rest_1_content);
+                }
+                /*rest_1_content.setVisibility(rest_1_content.isShown() ? View.GONE : View.VISIBLE);*/
+                break;
+            case R.id.rest_2:
+                TextView rest_2_content = (TextView) findViewById(R.id.rest_2_content);
+                if(rest_2_content.isShown()){
+                    slide_up(this, rest_2_content);
+                    rest_2_content.setVisibility(View.GONE);
+                }
+                else{
+                    rest_2_content.setVisibility(View.VISIBLE);
+                    slide_down(this, rest_2_content);
+                }
+                break;
+            /*case R.id.rest_3:
+                break;
+            case R.id.rest_4:
+                break;*/
+        }
+
+    }
+
+    /* slide down animation for after fragment */
+    public static void slide_down(Context ctx, View v){
+        Animation a = AnimationUtils.loadAnimation(ctx, R.anim.slide_down);
+        if(a != null){
+            a.reset();
+            if(v != null){
+                v.clearAnimation();
+                v.startAnimation(a);
+            }
+        }
+    }
+
+    /* slide up animation for after fragment */
+    public static void slide_up(Context ctx, View v){
+        Animation a = AnimationUtils.loadAnimation(ctx, R.anim.slide_up);
+        if(a != null){
+            a.reset();
+            if(v != null){
+                v.clearAnimation();
+                v.startAnimation(a);
+            }
         }
     }
 }
