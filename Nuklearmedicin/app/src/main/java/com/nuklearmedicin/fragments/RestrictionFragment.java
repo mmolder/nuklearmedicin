@@ -17,6 +17,9 @@ import android.widget.TextView;
 import com.nuklearmedicin.MainActivity;
 import com.nuklearmedicin.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 /**
  * Created by Mikael on 2016-04-13.
  */
@@ -42,6 +45,8 @@ public class RestrictionFragment extends Fragment {
                 alertBuilder.setPositiveButton("Lägg till", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        TextView test = (TextView) rootView.findViewById(R.id.test);
+                        test.setText(userInput.getText());
                         parseUserInput(userInput.getText().toString(), rootView);
                     }
                 });
@@ -62,8 +67,15 @@ public class RestrictionFragment extends Fragment {
     }
 
     public void parseUserInput(String input, View root) {
-        char date, month, rest1, rest2, rest3, rest4, rest5, rest6;
-        char[] restArray = input.toCharArray();
+        int date, month, rest1, rest2, rest3, rest4, rest5, rest6, i;
+        String r1="", r2="", r3="", r4="", r5="", r6="";
+        int[] restArray = new int[input.length()];
+
+        for(i = 0; i < input.length(); i++) {
+            try{
+                restArray[i] = Integer.parseInt(String.valueOf(input.charAt(i)));
+            } catch (NumberFormatException n){};
+        }
         date = restArray[0];
         month = restArray[1];
         rest1 = restArray[2];
@@ -73,9 +85,49 @@ public class RestrictionFragment extends Fragment {
         rest5 = restArray[6];
         rest6 = restArray[7];
 
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM");
+        Calendar cal = Calendar.getInstance();
+
+        /*cal.set(Calendar.YEAR, cal.get(Calendar.YEAR));*/
+
+        for(i = 0; i < 6; i++){
+            cal.set(Calendar.DAY_OF_MONTH, date);
+            cal.set(Calendar.MONTH, month-1);
+            switch (i){
+                case 0:
+                    cal.add(Calendar.DATE, rest1);
+                    r1 = sdf.format(cal.getTime());
+                    break;
+                case 1:
+                    cal.add(Calendar.DATE, rest2);
+                    r2 = sdf.format(cal.getTime());
+                    break;
+                case 2:
+                    cal.add(Calendar.DATE, rest3);
+                    r3 = sdf.format(cal.getTime());
+                    break;
+                case 3:
+                    cal.add(Calendar.DATE, rest4);
+                    r4 = sdf.format(cal.getTime());
+                    break;
+                case 4:
+                    cal.add(Calendar.DATE, rest5);
+                    r5 = sdf.format(cal.getTime());
+                    break;
+                case 5:
+                    cal.add(Calendar.DATE, rest6);
+                    r6 = sdf.format(cal.getTime());
+                    break;
+            }
+        }
+
         TextView tv1 = (TextView) root.findViewById(R.id.r1);
         TextView tv2 = (TextView) root.findViewById(R.id.r2);
         TextView tv3 = (TextView) root.findViewById(R.id.r3);
+
+        tv1.setText(r1);
+        tv2.setText(r2);
+        tv3.setText(r3);
     }
 
 }
