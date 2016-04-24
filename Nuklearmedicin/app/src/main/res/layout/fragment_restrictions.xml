@@ -106,7 +106,7 @@
         android:layout_height="65dp"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_menu_add"
+        android:src="@mipmap/ic_add_white_24dp"
         android:background="@drawable/oval"
         app:backgroundTint="#005883"/>
 

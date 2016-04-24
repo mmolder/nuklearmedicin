@@ -45,9 +45,14 @@ public class RestrictionFragment extends Fragment {
                 alertBuilder.setPositiveButton("Lägg till", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        TextView test = (TextView) rootView.findViewById(R.id.test);
-                        test.setText(userInput.getText());
-                        parseUserInput(userInput.getText().toString(), rootView);
+                        if(userInput.getText().toString().matches("")){
+                            userInput.setError("Ange korrekt kod");
+                        }
+                        else {
+                            TextView test = (TextView) rootView.findViewById(R.id.test);
+                            test.setText(userInput.getText());
+                            parseUserInput(userInput.getText().toString(), rootView);
+                        }
                     }
                 });
 
