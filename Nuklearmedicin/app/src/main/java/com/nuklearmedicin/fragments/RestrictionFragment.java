@@ -8,6 +8,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +46,7 @@ public class RestrictionFragment extends Fragment {
                 alertBuilder.setPositiveButton("Lägg till", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        if(userInput.getText().toString().matches("")){
+                        if(TextUtils.isEmpty(userInput.getText().toString())){
                             userInput.setError("Ange korrekt kod");
                         }
                         else {
