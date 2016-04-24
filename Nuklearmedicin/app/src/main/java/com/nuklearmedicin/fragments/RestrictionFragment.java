@@ -71,11 +71,14 @@ public class RestrictionFragment extends Fragment {
         String r1="", r2="", r3="", r4="", r5="", r6="";
         int[] restArray = new int[input.length()];
 
-        for(i = 0; i < input.length(); i++) {
-            try{
-                restArray[i] = Integer.parseInt(String.valueOf(input.charAt(i)));
-            } catch (NumberFormatException n){};
+        int j = input.length();
+
+        for(i = 0; i < j; i++) {
+            try {
+                restArray[i] = Integer.parseInt(String.valueOf(input.charAt(i)), 36);
+            }  catch (NumberFormatException n){}
         }
+
         date = restArray[0];
         month = restArray[1];
         rest1 = restArray[2];
@@ -124,10 +127,16 @@ public class RestrictionFragment extends Fragment {
         TextView tv1 = (TextView) root.findViewById(R.id.r1);
         TextView tv2 = (TextView) root.findViewById(R.id.r2);
         TextView tv3 = (TextView) root.findViewById(R.id.r3);
+        TextView tv4 = (TextView) root.findViewById(R.id.r4);
+        TextView tv5 = (TextView) root.findViewById(R.id.r5);
+        TextView tv6 = (TextView) root.findViewById(R.id.r6);
 
         tv1.setText(r1);
         tv2.setText(r2);
         tv3.setText(r3);
+        tv4.setText(r4);
+        tv5.setText(r5);
+        tv6.setText(r6);
     }
 
 }
