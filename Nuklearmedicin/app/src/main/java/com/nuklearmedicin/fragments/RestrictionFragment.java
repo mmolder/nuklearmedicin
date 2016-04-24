@@ -12,6 +12,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -36,35 +37,62 @@ public class RestrictionFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                /* get edit text from xml */
                 View v = (LayoutInflater.from(getContext())).inflate(R.layout.user_input, null);
 
-                AlertDialog.Builder alertBuilder = new AlertDialog.Builder(getContext());
+                final AlertDialog.Builder alertBuilder = new AlertDialog.Builder(getContext());
+                /* add custom view to alert dialog */
                 alertBuilder.setView(v);
 
                 final EditText userInput = (EditText) v.findViewById(R.id.userinput);
 
+                alertBuilder.setTitle("Ange din 8-siffriga kod");
+
+                /* add positive button to alert dialog */
                 alertBuilder.setPositiveButton("Lägg till", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        if(TextUtils.isEmpty(userInput.getText().toString())){
-                            userInput.setError("Ange korrekt kod");
-                        }
-                        else {
-                            TextView test = (TextView) rootView.findViewById(R.id.test);
-                            test.setText(userInput.getText());
-                            parseUserInput(userInput.getText().toString(), rootView);
-                        }
+
                     }
                 });
 
+                /* add negative button to alert dialog */
                 alertBuilder.setNegativeButton("Avbryt", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();
                     }
                 });
-                Dialog dialog = alertBuilder.create();
-                dialog.show();
+
+                final Dialog d = alertBuilder.create();
+
+                /* set listener on alert dialog */
+                d.setOnShowListener(new DialogInterface.OnShowListener() {
+
+                    @Override
+                    public void onShow(DialogInterface dialog) {
+                        Button b = ((AlertDialog)d).getButton(AlertDialog.BUTTON_POSITIVE);
+                        /* set on click listener on positive button */
+                        b.setOnClickListener(new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                /* if no user input, show error */
+                                if(TextUtils.isEmpty(userInput.getText().toString())){
+                                    userInput.setError("Ej giltig kod!");
+                                }
+                                /* ok user input, proceed */
+                                else {
+                                    TextView test = (TextView) rootView.findViewById(R.id.test);
+                                    test.setText(userInput.getText());
+                                    parseUserInput(userInput.getText().toString(), rootView);
+                                }
+                            }
+                        });
+                    }
+                });
+                d.show();
             }
         });
 
