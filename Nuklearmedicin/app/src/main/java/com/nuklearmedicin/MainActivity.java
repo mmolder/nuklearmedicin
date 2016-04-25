@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.nuklearmedicin.fragments.AfterFragment;
@@ -148,12 +149,18 @@ public class MainActivity extends AppCompatActivity
         switch(v.getId()){
             case R.id.rest_1:
                 TextView rest_1_content = (TextView) findViewById(R.id.rest_1_content);
+                TextView rest_1 = (TextView) findViewById(R.id.rest_1);
+                LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(DrawerLayout.LayoutParams.WRAP_CONTENT, DrawerLayout.LayoutParams.WRAP_CONTENT);
                 if(rest_1_content.isShown()){
                     slide_up(this, rest_1_content);
+                    llp.setMargins(0,0,0,20);
+                    rest_1.setLayoutParams(llp);
                     rest_1_content.setVisibility(View.GONE);
                 }
                 else{
                     rest_1_content.setVisibility(View.VISIBLE);
+                    llp.setMargins(0,0,0,0);
+                    rest_1.setLayoutParams(llp);
                     slide_down(this, rest_1_content);
                 }
                 /*rest_1_content.setVisibility(rest_1_content.isShown() ? View.GONE : View.VISIBLE);*/

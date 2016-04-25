@@ -13,9 +13,10 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Efter behandlingen"
-            android:id="@+id/textView11"
+            android:id="@+id/title_after_fragment"
             android:layout_gravity="center_horizontal"
-            android:paddingTop="10dp" />
+            android:paddingTop="10dp"
+            android:textSize="30dp" />
 
         <ScrollView
             android:id="@+id/scroll_view"
@@ -37,12 +38,20 @@
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:textSize="30dp" />
+                    android:background="#005883"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="30dp"
+                    android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_1_content"
                     android:text="Lorem ipsum dolor sit amet, summo comprehensam est id. Mea viris saperet minimum te, tibique omittam incorrupte est ad, veniam nostrum ei duo. Ne est solum idque sadipscing, elitr fierent concludaturque id vix. Ius et solum nostro volutpat.  Id quo wisi animal. Ut ius exerci quidam timeam, ut est postea ponderum delicata, odio elit bonorum sed in. Cu vim reque aeque aliquam, mel ea cibo malorum inciderint. Eu nec labore consulatu urbanitas, qui accumsan offendit id, debitis impedit democritum sed ut.  Eos commodo maiorum te. Vocent oporteat cu eum, mel tale iisque gloriatur ea. Id usu virtute ornatus. Eam cu cibo sonet. An his illud indoctum, nec ne falli ocurreret. Tempor denique no has, eam te erant signiferumque. "
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="@drawable/rest_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:textSize="20dp" />
                 <!-- activity_info layout file -->
                 <!-- Clickable title -->
@@ -52,6 +61,10 @@
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="#005883"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:textSize="30dp" />
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_2_content"
@@ -65,6 +78,10 @@
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="#005883"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:textSize="30dp" />
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_3_content"
@@ -78,6 +95,10 @@
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="#005883"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:textSize="30dp" />
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_4_content"
@@ -91,6 +112,10 @@
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="#005883"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:textSize="30dp" />
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_5_content"
@@ -104,6 +129,10 @@
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="#005883"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:textSize="30dp" />
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_6_content"

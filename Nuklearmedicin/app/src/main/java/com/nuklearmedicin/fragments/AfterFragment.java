@@ -29,20 +29,26 @@ public class AfterFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_after, container, false);
 
+        TextView title = (TextView) rootView.findViewById(R.id.title_after_fragment);
         /* Set custom font to buttons */
+        /*
         TextView rest1 = (TextView) rootView.findViewById(R.id.rest_1);
         TextView rest2 = (TextView) rootView.findViewById(R.id.rest_2);
         TextView rest3 = (TextView) rootView.findViewById(R.id.rest_3);
         TextView rest4 = (TextView) rootView.findViewById(R.id.rest_4);
         TextView rest5 = (TextView) rootView.findViewById(R.id.rest_5);
         TextView rest6 = (TextView) rootView.findViewById(R.id.rest_6);
+        */
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/myfont.ttf");
+        /*
         rest1.setTypeface(font);
         rest2.setTypeface(font);
         rest3.setTypeface(font);
         rest4.setTypeface(font);
         rest5.setTypeface(font);
         rest6.setTypeface(font);
+        */
+        title.setTypeface(font);
 
         /* hide some content */
         rest_1_content = (TextView) rootView.findViewById(R.id.rest_1_content);
