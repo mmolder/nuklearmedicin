@@ -16,16 +16,19 @@
             android:id="@+id/textView11"
             android:layout_gravity="center_horizontal"
             android:paddingTop="10dp" />
+
         <ScrollView
             android:id="@+id/scroll_view"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:fillViewport="true">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <!-- activity_info layout file -->
                 <!-- Clickable title -->
                 <TextView  android:id="@+id/rest_1"
@@ -52,6 +55,58 @@
                     android:textSize="30dp" />
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_2_content"
+                    android:text="Lorem ipsum dolor sit amet1234. "
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="20dp" />
+                <TextView  android:id="@+id/rest_3"
+                    android:text="Lorem ipsum dolor sit amet2"
+                    android:clickable="true"
+                    android:onClick="toggle_contents"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="30dp" />
+                <!--content to hide/show -->
+                <TextView  android:id="@+id/rest_3_content"
+                    android:text="Lorem ipsum dolor sit amet1234. "
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="20dp" />
+                <TextView  android:id="@+id/rest_4"
+                    android:text="Lorem ipsum dolor sit amet2"
+                    android:clickable="true"
+                    android:onClick="toggle_contents"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="30dp" />
+                <!--content to hide/show -->
+                <TextView  android:id="@+id/rest_4_content"
+                    android:text="Lorem ipsum dolor sit amet1234. "
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="20dp" />
+                <TextView  android:id="@+id/rest_5"
+                    android:text="Lorem ipsum dolor sit amet2"
+                    android:clickable="true"
+                    android:onClick="toggle_contents"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="30dp" />
+                <!--content to hide/show -->
+                <TextView  android:id="@+id/rest_5_content"
+                    android:text="Lorem ipsum dolor sit amet1234. "
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="20dp" />
+                <TextView  android:id="@+id/rest_6"
+                    android:text="Lorem ipsum dolor sit amet2"
+                    android:clickable="true"
+                    android:onClick="toggle_contents"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="30dp" />
+                <!--content to hide/show -->
+                <TextView  android:id="@+id/rest_6_content"
                     android:text="Lorem ipsum dolor sit amet1234. "
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"

@@ -170,10 +170,51 @@ public class MainActivity extends AppCompatActivity
                 }
                 break;
             /* TODO : fix rest of button presses */
-            /*case R.id.rest_3:
+            case R.id.rest_3:
+                TextView rest_3_content = (TextView) findViewById(R.id.rest_3_content);
+                if(rest_3_content.isShown()){
+                    slide_up(this, rest_3_content);
+                    rest_3_content.setVisibility(View.GONE);
+                }
+                else{
+                    rest_3_content.setVisibility(View.VISIBLE);
+                    slide_down(this, rest_3_content);
+                }
                 break;
             case R.id.rest_4:
-                break;*/
+                TextView rest_4_content = (TextView) findViewById(R.id.rest_4_content);
+                if(rest_4_content.isShown()){
+                    slide_up(this, rest_4_content);
+                    rest_4_content.setVisibility(View.GONE);
+                }
+                else{
+                    rest_4_content.setVisibility(View.VISIBLE);
+                    slide_down(this, rest_4_content);
+                }
+                break;
+            case R.id.rest_5:
+                TextView rest_5_content = (TextView) findViewById(R.id.rest_5_content);
+                if(rest_5_content.isShown()){
+                    slide_up(this, rest_5_content);
+                    rest_5_content.setVisibility(View.GONE);
+                }
+                else{
+                    rest_5_content.setVisibility(View.VISIBLE);
+                    slide_down(this, rest_5_content);
+                }
+                break;
+            case R.id.rest_6:
+                TextView rest_6_content = (TextView) findViewById(R.id.rest_6_content);
+                if(rest_6_content.isShown()){
+                    slide_up(this, rest_6_content);
+                    rest_6_content.setVisibility(View.GONE);
+                }
+                else{
+                    rest_6_content.setVisibility(View.VISIBLE);
+                    slide_down(this, rest_6_content);
+                }
+                break;
+
         }
 
     }
