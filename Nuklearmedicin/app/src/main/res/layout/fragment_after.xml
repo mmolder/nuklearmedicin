@@ -12,11 +12,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Efter behandlingen"
+            android:text="EFTER BEHANDLINGEN"
             android:id="@+id/title_after_fragment"
             android:layout_gravity="center_horizontal"
             android:paddingTop="10dp"
-            android:textSize="30dp" />
+            android:layout_marginBottom="35dp"
+            android:textSize="35dp" />
 
         <ScrollView
             android:id="@+id/scroll_view"
@@ -26,22 +27,26 @@
             android:fillViewport="true">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <!-- activity_info layout file -->
                 <!-- Clickable title -->
                 <TextView  android:id="@+id/rest_1"
-                    android:text="Lorem ipsum dolor sit amet"
+                    android:text="Lorem ipsum dolor amet"
                     android:clickable="true"
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="#005883"
+                    android:background="@drawable/button_corners"
+                    android:backgroundTint="#1f92b6"
+                    android:drawableRight="@mipmap/ic_expand_more_white_24dp"
                     android:layout_marginBottom="10dp"
                     android:paddingBottom="10dp"
                     android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:textSize="30dp"
                     android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
@@ -50,95 +55,147 @@
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:background="@drawable/rest_content"
+                    android:backgroundTint="#FFFFFF"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20dp" />
                 <!-- activity_info layout file -->
                 <!-- Clickable title -->
                 <TextView  android:id="@+id/rest_2"
-                    android:text="Lorem ipsum dolor sit amet2"
+                    android:text="Lorem ipsum dolor sit"
                     android:clickable="true"
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="#005883"
+                    android:background="@drawable/button_corners"
+                    android:backgroundTint="#f13b59"
+                    android:drawableRight="@mipmap/ic_expand_more_white_24dp"
                     android:layout_marginBottom="10dp"
                     android:paddingBottom="10dp"
                     android:paddingTop="10dp"
-                    android:textSize="30dp" />
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="30dp"
+                    android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_2_content"
                     android:text="Lorem ipsum dolor sit amet1234. "
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="@drawable/button_corners"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20dp" />
                 <TextView  android:id="@+id/rest_3"
-                    android:text="Lorem ipsum dolor sit amet2"
+                    android:text="Lorem ipsum dolor sit"
                     android:clickable="true"
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="#005883"
+                    android:background="@drawable/button_corners"
+                    android:backgroundTint="#41931b"
+                    android:drawableRight="@mipmap/ic_expand_more_white_24dp"
                     android:layout_marginBottom="10dp"
                     android:paddingBottom="10dp"
                     android:paddingTop="10dp"
-                    android:textSize="30dp" />
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="30dp"
+                    android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_3_content"
                     android:text="Lorem ipsum dolor sit amet1234. "
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="@drawable/rest_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20dp" />
                 <TextView  android:id="@+id/rest_4"
-                    android:text="Lorem ipsum dolor sit amet2"
+                    android:text="Lorem ipsum dolor sit"
                     android:clickable="true"
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="#005883"
+                    android:background="@drawable/button_corners"
+                    android:backgroundTint="#1f92b6"
+                    android:drawableRight="@mipmap/ic_expand_more_white_24dp"
                     android:layout_marginBottom="10dp"
                     android:paddingBottom="10dp"
                     android:paddingTop="10dp"
-                    android:textSize="30dp" />
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="30dp"
+                    android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_4_content"
                     android:text="Lorem ipsum dolor sit amet1234. "
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="@drawable/rest_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20dp" />
                 <TextView  android:id="@+id/rest_5"
-                    android:text="Lorem ipsum dolor sit amet2"
+                    android:text="Lorem ipsum dolor sit"
                     android:clickable="true"
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="#005883"
+                    android:background="@drawable/button_corners"
+                    android:backgroundTint="#f13b59"
+                    android:drawableRight="@mipmap/ic_expand_more_white_24dp"
                     android:layout_marginBottom="10dp"
                     android:paddingBottom="10dp"
                     android:paddingTop="10dp"
-                    android:textSize="30dp" />
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="30dp"
+                    android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_5_content"
                     android:text="Lorem ipsum dolor sit amet1234. "
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="@drawable/rest_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20dp" />
                 <TextView  android:id="@+id/rest_6"
-                    android:text="Lorem ipsum dolor sit amet2"
+                    android:text="Lorem ipsum dolor sit"
                     android:clickable="true"
                     android:onClick="toggle_contents"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="#005883"
+                    android:background="@drawable/button_corners"
+                    android:backgroundTint="#41931b"
+                    android:drawableRight="@mipmap/ic_expand_more_white_24dp"
                     android:layout_marginBottom="10dp"
                     android:paddingBottom="10dp"
                     android:paddingTop="10dp"
-                    android:textSize="30dp" />
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="30dp"
+                    android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/rest_6_content"
                     android:text="Lorem ipsum dolor sit amet1234. "
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:background="@drawable/rest_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20dp" />
             </LinearLayout>
         </ScrollView>
