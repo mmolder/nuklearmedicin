@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
@@ -22,6 +23,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.nuklearmedicin.fragments.AfterFragment;
@@ -148,27 +150,48 @@ public class MainActivity extends AppCompatActivity
     /* handle button click from restriction fragment */
     public void restrictionButtonClick (View v) {
         FragmentManager fm = getSupportFragmentManager();
+        Fragment fragment;
+        Bundle bundle = new Bundle();
 
         switch(v.getId()){
             case R.id.rest1:
-                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                fragment = new AfterFragment();
+                bundle.putInt("rest",1);
+                fragment.setArguments(bundle);
+                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest2:
-                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                fragment = new AfterFragment();
+                bundle.putInt("rest",2);
+                fragment.setArguments(bundle);
+                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest3:
-                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                fragment = new AfterFragment();
+                bundle.putInt("rest",3);
+                fragment.setArguments(bundle);
+                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest4:
-                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                fragment = new AfterFragment();
+                bundle.putInt("rest",4);
+                fragment.setArguments(bundle);
+                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest5:
-                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                fragment = new AfterFragment();
+                bundle.putInt("rest",5);
+                fragment.setArguments(bundle);
+                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest6:
-                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                fragment = new AfterFragment();
+                bundle.putInt("rest",6);
+                fragment.setArguments(bundle);
+                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
         }
+
     }
 
     /* handle button clicks from after fragment */

@@ -1,12 +1,19 @@
 package com.nuklearmedicin.fragments;
 
+import android.content.Context;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.nuklearmedicin.R;
@@ -31,14 +38,14 @@ public class AfterFragment extends Fragment {
 
         TextView title = (TextView) rootView.findViewById(R.id.title_after_fragment);
         /* Set custom font to buttons */
-        /*
+
         TextView rest1 = (TextView) rootView.findViewById(R.id.rest_1);
         TextView rest2 = (TextView) rootView.findViewById(R.id.rest_2);
         TextView rest3 = (TextView) rootView.findViewById(R.id.rest_3);
         TextView rest4 = (TextView) rootView.findViewById(R.id.rest_4);
         TextView rest5 = (TextView) rootView.findViewById(R.id.rest_5);
         TextView rest6 = (TextView) rootView.findViewById(R.id.rest_6);
-        */
+
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/myfont.ttf");
         /*
         rest1.setTypeface(font);
@@ -64,8 +71,128 @@ public class AfterFragment extends Fragment {
         rest_6_content = (TextView) rootView.findViewById(R.id.rest_6_content);
         rest_6_content.setVisibility(View.GONE);
 
+        int showOnStart = 0;
+        Bundle bundle = this.getArguments();
+        if(bundle != null){
+            showOnStart = bundle.getInt("rest", 0);
+        }
+
+        ScrollView sv = (ScrollView) rootView.findViewById(R.id.scroll_view);
+        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(DrawerLayout.LayoutParams.MATCH_PARENT, DrawerLayout.LayoutParams.MATCH_PARENT);
+        Drawable arrowUp = getResources().getDrawable(R.mipmap.ic_expand_less_white_24dp);
+        Drawable arrowDown = getResources().getDrawable(R.mipmap.ic_expand_more_white_24dp);
+        switch(showOnStart){
+            case 1:
+                /* show content */
+                rest_1_content.setVisibility(View.VISIBLE);
+                /* set all margins to 0 */
+                llp.setMargins(0,0,0,0);
+                rest1.setLayoutParams(llp);
+                /* change icon to arrow up */
+                rest1.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                /* remove two rounded corners */
+                rest1.setBackgroundResource(R.drawable.rest_corner);
+                /* slide down animation */
+                slide_down(getContext(), rest_1_content);
+                rest1.getParent().requestChildFocus(rest1,rest1);
+                break;
+            case 2:
+                /* show content */
+                rest_2_content.setVisibility(View.VISIBLE);
+                /* set all margins to 0 */
+                llp.setMargins(0,0,0,0);
+                rest2.setLayoutParams(llp);
+                /* change icon to arrow up */
+                rest2.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                /* remove two rounded corners */
+                rest2.setBackgroundResource(R.drawable.rest_corner);
+                /* slide down animation */
+                slide_down(getContext(), rest_2_content);
+                rest2.getParent().requestChildFocus(rest2,rest2);
+                break;
+            case 3:
+                /* show content */
+                rest_3_content.setVisibility(View.VISIBLE);
+                /* set all margins to 0 */
+                llp.setMargins(0,0,0,0);
+                rest3.setLayoutParams(llp);
+                /* change icon to arrow up */
+                rest3.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                /* remove two rounded corners */
+                rest3.setBackgroundResource(R.drawable.rest_corner);
+                /* slide down animation */
+                slide_down(getContext(), rest_3_content);
+                rest_3_content.getParent().requestChildFocus(rest_3_content,rest_3_content);
+                break;
+            case 4:
+                /* show content */
+                rest_4_content.setVisibility(View.VISIBLE);
+                /* set all margins to 0 */
+                llp.setMargins(0,0,0,0);
+                rest4.setLayoutParams(llp);
+                /* change icon to arrow up */
+                rest4.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                /* remove two rounded corners */
+                rest4.setBackgroundResource(R.drawable.rest_corner);
+                /* slide down animation */
+                slide_down(getContext(), rest_4_content);
+                rest_4_content.getParent().requestChildFocus(rest_4_content,rest_4_content);
+                break;
+            case 5:
+                /* show content */
+                rest_5_content.setVisibility(View.VISIBLE);
+                /* set all margins to 0 */
+                llp.setMargins(0,0,0,0);
+                rest5.setLayoutParams(llp);
+                /* change icon to arrow up */
+                rest5.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                /* remove two rounded corners */
+                rest5.setBackgroundResource(R.drawable.rest_corner);
+                /* slide down animation */
+                slide_down(getContext(), rest_5_content);
+                rest_5_content.getParent().requestChildFocus(rest_5_content,rest_5_content);
+                break;
+            case 6:
+                 /* show content */
+                rest_6_content.setVisibility(View.VISIBLE);
+                /* set all margins to 0 */
+                llp.setMargins(0,0,0,0);
+                rest6.setLayoutParams(llp);
+                /* change icon to arrow up */
+                rest6.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                /* remove two rounded corners */
+                rest6.setBackgroundResource(R.drawable.rest_corner);
+                /* slide down animation */
+                slide_down(getContext(), rest_6_content);
+                rest_6_content.getParent().requestChildFocus(rest_6_content,rest_6_content);
+                break;
+        }
+
         return rootView;
 
     }
 
+    /* slide down animation for after fragment */
+    public static void slide_down(Context ctx, View v){
+        Animation a = AnimationUtils.loadAnimation(ctx, R.anim.slide_down);
+        if(a != null){
+            a.reset();
+            if(v != null){
+                v.clearAnimation();
+                v.startAnimation(a);
+            }
+        }
+    }
+
+    /* slide up animation for after fragment */
+    public static void slide_up(Context ctx, View v){
+        Animation a = AnimationUtils.loadAnimation(ctx, R.anim.slide_up);
+        if(a != null){
+            a.reset();
+            if(v != null){
+                v.clearAnimation();
+                v.startAnimation(a);
+            }
+        }
+    }
 }
