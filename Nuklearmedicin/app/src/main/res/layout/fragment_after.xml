@@ -59,6 +59,7 @@ Nära kontakt med din partner, inklusive sexuellt umgänge, bör begränsas till
                     android:layout_width="match_parent"
                     android:background="@drawable/rest_content"
                     android:backgroundTint="#FFFFFF"
+                    android:drawableLeft="@drawable/vuxna"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:layout_marginBottom="10dp"
