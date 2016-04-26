@@ -145,6 +145,32 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    /* handle button click from restriction fragment */
+    public void restrictionButtonClick (View v) {
+        FragmentManager fm = getSupportFragmentManager();
+
+        switch(v.getId()){
+            case R.id.rest1:
+                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                break;
+            case R.id.rest2:
+                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                break;
+            case R.id.rest3:
+                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                break;
+            case R.id.rest4:
+                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                break;
+            case R.id.rest5:
+                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                break;
+            case R.id.rest6:
+                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                break;
+        }
+    }
+
     /* handle button clicks from after fragment */
     public void toggle_contents(View v){
         LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(DrawerLayout.LayoutParams.MATCH_PARENT, DrawerLayout.LayoutParams.MATCH_PARENT);
