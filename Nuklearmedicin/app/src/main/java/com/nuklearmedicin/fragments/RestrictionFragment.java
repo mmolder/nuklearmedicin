@@ -1,6 +1,7 @@
 package com.nuklearmedicin.fragments;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,6 +20,12 @@ import android.widget.TextView;
 import com.nuklearmedicin.MainActivity;
 import com.nuklearmedicin.R;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -27,11 +34,15 @@ import java.util.Calendar;
  */
 public class RestrictionFragment extends Fragment {
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         final View rootView = inflater.inflate(R.layout.fragment_restrictions, container, false);
+
+        /* read user code from memory if there is one */
+        //readFromMemory(rootView);
 
         FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +82,7 @@ public class RestrictionFragment extends Fragment {
                 d.setOnShowListener(new DialogInterface.OnShowListener() {
 
                     @Override
-                    public void onShow(DialogInterface dialog) {
+                    public void onShow(final DialogInterface dialog) {
                         Button b = ((AlertDialog)d).getButton(AlertDialog.BUTTON_POSITIVE);
                         /* set on click listener on positive button */
                         b.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +97,19 @@ public class RestrictionFragment extends Fragment {
                                 else {
                                     TextView test = (TextView) rootView.findViewById(R.id.test);
                                     test.setText(userInput.getText());
-                                    parseUserInput(userInput.getText().toString(), rootView);
+                                    /*
+                                    try {
+                                        FileOutputStream fileOutputStream = getContext().openFileOutput("user_code", Context.MODE_PRIVATE);
+                                        fileOutputStream.write(userInput.toString().getBytes());
+                                        fileOutputStream.close();
+                                        parseUserInput(userInput.toString(), rootView);
+                                        dialog.cancel();
+                                    } catch (FileNotFoundException e) {
+                                        e.printStackTrace();
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }*/
+                                    parseUserInput(userInput.toString(), rootView);
                                 }
                             }
                         });
@@ -100,6 +123,7 @@ public class RestrictionFragment extends Fragment {
 
     }
 
+    /* parse the user input and display in textviews */
     public void parseUserInput(String input, View root) {
         int date, month, rest1, rest2, rest3, rest4, rest5, rest6, i;
         String r1="", r2="", r3="", r4="", r5="", r6="";
@@ -171,6 +195,28 @@ public class RestrictionFragment extends Fragment {
         tv4.setText(r4);
         tv5.setText(r5);
         tv6.setText(r6);
+
+    }
+
+    /* open file from phone memory and get user code if present */
+    public void readFromMemory(View root){
+        try {
+            String code;
+            FileInputStream fileInputStream = getContext().openFileInput("user_code");
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            StringBuffer stringBuffer = new StringBuffer();
+            while((code = bufferedReader.readLine()) != null){
+                stringBuffer.append(code + "\n");
+            }
+
+            /* parse the code and display in textviews */
+            parseUserInput(stringBuffer.toString(), root);
+        } catch (FileNotFoundException e) {
+
+        } catch (IOException e) {
+
+        }
     }
 
 }

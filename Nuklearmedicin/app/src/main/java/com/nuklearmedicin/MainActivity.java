@@ -150,42 +150,36 @@ public class MainActivity extends AppCompatActivity
     /* handle button click from restriction fragment */
     public void restrictionButtonClick (View v) {
         FragmentManager fm = getSupportFragmentManager();
-        Fragment fragment;
+        Fragment fragment = new AfterFragment();;
         Bundle bundle = new Bundle();
 
         switch(v.getId()){
             case R.id.rest1:
-                fragment = new AfterFragment();
                 bundle.putInt("rest",1);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest2:
-                fragment = new AfterFragment();
                 bundle.putInt("rest",2);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest3:
-                fragment = new AfterFragment();
                 bundle.putInt("rest",3);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest4:
-                fragment = new AfterFragment();
                 bundle.putInt("rest",4);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest5:
-                fragment = new AfterFragment();
                 bundle.putInt("rest",5);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest6:
-                fragment = new AfterFragment();
                 bundle.putInt("rest",6);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
