@@ -11,6 +11,10 @@
             android:icon="@mipmap/ic_priority_high_black_24dp"
             android:title="Restriktioner" />
         <item
+            android:id="@+id/nav_note"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Anteckningar"/>
+        <item
             android:id="@+id/nav_contact"
             android:icon="@mipmap/ic_call_black_24dp"
             android:title="Kontakt" />
