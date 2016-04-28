@@ -16,32 +16,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Restriction fragment"
+        android:text="Mina restriktioner"
         android:id="@+id/textView3"
         android:layout_gravity="center_horizontal|top"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="5dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" När du får behnadling kommer behandlande sjukhusfysiker att ge dig en kod som du kan fylla i för att få fram datum som gäller för dig..."
+        android:text="När du får din behandling kommer behandlande sjukhusfysiker att ge dig en kod som du kan använda för att fylla i det Gula Kortet nedan. Det är en 8-siffrig kod som du fyller i genom att trycka på den blåa knappen i det nedre högra hörnet.\n\nPå kortet finns sex åtgärder för att minska bestrålningen av andra människor. När du fyllt i din kod kommer kortet att innehålla datum för hur länge du ska följa dessa. Antalet dagar beror på hur stor dos du får och hur snabbt din kropp gör sig av med radioaktiviteten. "
         android:id="@+id/desc_yellowcard"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="12dp"/>
 
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/userinputtext"
-        android:text=""/>
 </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|top"
-        android:padding="20dp"
+        android:padding="15dp"
         android:background="@drawable/border_yellowcard">
         <TextView
             android:layout_width="wrap_content"
@@ -112,10 +108,6 @@
     </LinearLayout>
 
 
-
-
-
-
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -164,7 +156,13 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text=""
         android:id="@+id/r6" />
+
+
 </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="För att få reda på mer information, tryck på respektive åtgärd. Läs igenom denna information före besöket så att du kan diskutera eventuella frågor med behandlande sjukhusfysiker. "/>
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
@@ -184,5 +182,6 @@
         android:text=""
         android:id="@+id/test"
         android:layout_gravity="left|bottom" />
+
 
 </FrameLayout>
