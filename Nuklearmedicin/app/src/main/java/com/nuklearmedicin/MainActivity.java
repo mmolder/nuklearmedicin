@@ -31,6 +31,7 @@ import com.nuklearmedicin.fragments.BeforeFragment;
 import com.nuklearmedicin.fragments.ContactFragment;
 import com.nuklearmedicin.fragments.DuringFragment;
 import com.nuklearmedicin.fragments.MainFragment;
+import com.nuklearmedicin.fragments.NotesFragment;
 import com.nuklearmedicin.fragments.RestrictionFragment;
 import com.nuklearmedicin.fragments.SettingsFragment;
 
@@ -119,6 +120,8 @@ public class MainActivity extends AppCompatActivity
             fm.beginTransaction().replace(R.id.content_frame, new MainFragment()).commit();
         } else if (id == R.id.nav_rest) {
             fm.beginTransaction().replace(R.id.content_frame, new RestrictionFragment()).commit();
+        }else if (id == R.id.nav_note) {
+            fm.beginTransaction().replace(R.id.content_frame, new NotesFragment()).commit();
         } else if (id == R.id.nav_contact) {
             fm.beginTransaction().replace(R.id.content_frame, new ContactFragment()).commit();
         } else if (id == R.id.nav_settings) {
