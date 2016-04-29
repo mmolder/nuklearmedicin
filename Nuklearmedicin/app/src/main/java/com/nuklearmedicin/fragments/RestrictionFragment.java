@@ -42,7 +42,7 @@ public class RestrictionFragment extends Fragment {
         final View rootView = inflater.inflate(R.layout.fragment_restrictions, container, false);
 
         /* read user code from memory if there is one */
-        //readFromMemory(rootView);
+        readFromMemory(rootView);
 
         FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -97,10 +97,10 @@ public class RestrictionFragment extends Fragment {
                                 else {
                                     TextView test = (TextView) rootView.findViewById(R.id.test);
                                     test.setText(userInput.getText());
-                                    /*
+
                                     try {
                                         FileOutputStream fileOutputStream = getContext().openFileOutput("user_code", Context.MODE_PRIVATE);
-                                        fileOutputStream.write(userInput.toString().getBytes());
+                                        fileOutputStream.write(userInput.getText().toString().getBytes());
                                         fileOutputStream.close();
                                         parseUserInput(userInput.toString(), rootView);
                                         dialog.cancel();
@@ -108,8 +108,8 @@ public class RestrictionFragment extends Fragment {
                                         e.printStackTrace();
                                     } catch (IOException e) {
                                         e.printStackTrace();
-                                    }*/
-                                    parseUserInput(userInput.toString(), rootView);
+                                    }
+                                    parseUserInput(userInput.getText().toString(), rootView);
                                 }
                             }
                         });
