@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content>
+    <before>
+        <title></title>
+        <undertitle></undertitle>
+        <text></text>
+    </before>
+    <during>
+
+    </during>
+    <after>
+        <title>Efter behandlingen</title>
+        <undertitle></undertitle>
+        <restriction1>
+            Den viktigaste försiktighetsåtgärden är att inte vara nära någon
+            annan person, vare sig hemma eller på arbetet. Försök att hålla
+            dig på åtminstone 1 meters avstånd. Under längre tid (mer än 1 timme)
+            bör avståndet vara två meter.\n\nDenna åtgärd gäller endast personer
+            som du i vanliga fall tillbringar mycket tid med, som t.ex. familjemedlemmar
+            och arbetskollegor. Det gäller inte personer som du bara träffar korta stunder
+            vid enstaka tillfällen. Det är inga problem att gå promenader, handla i affärer
+            och liknande aktiviteter där du bara sporadiskt träffar andra människor.\n\nNära
+            kontakt med din partner, inklusive sexuellt umgänge, bör begränsas till en halvtimme
+            om dagen. Ni bör inte sova i samma säng utan minst två meter ifrån varandra under
+            den tid nära kontakt ska undvikas. Detta gäller även om det finns en vägg mellan
+            sängarna. Vanliga inomhusväggar skärmar inte av strålningen.
+        </restriction1>
+        <restriction2>
+            Barn är känsligare för bestrålning än vuxna. Om du har små barn i din närhet bör du
+            ordna så att kontakten med barnen blir så liten som möjligt. Försök att hålla dig
+            på åtminstone 1 meters avstånd. Under längre tid (mer än 1 timme) bör avståndet vara
+            två meter. Du ska absolut inte sova tillsammans med barn. Eftersom radio¬aktiviteten
+            till liten del utsöndras i saliv skall du undvika att dela t.ex. bestick med barn eller
+            pussa barn under den tid som anges vid punkt 6 på det gula kortet. Du bör också undvika
+            nära kontakt med gravida kvinnor för att inte riskera att skada fostret under den tid
+            som finns angivet på det gula kortet.\n\nDetta gäller inte barn och gravida kvinnor
+            som du bara träffar korta stunder vid enstaka tillfällen, när du till exempel är ute
+            och handlar mat eller går promenader.
+        </restriction2>
+        <restriction3>
+            Man kan i de flesta fall gå till arbetet. Om du arbetar i nära kontakt med andra
+            människor, speciellt barn, kan du komma att få restriktioner. Till exempel förskollärare
+            och andra som arbetar med små barn behöver ofta stanna hemma från arbetet. Behandlande
+            sjukhusfysiker kommer att fråga dig om ditt arbete för att kunna ge individuella
+            rekommendationer och eventuell sjukskrivning.
+        </restriction3>
+        <restriction4>
+            Undvik bio och teaterbesök där du under flera timmar befinner dig i direkt närhet av
+            andra människor.
+        </restriction4>
+        <restriction5>
+            Undvik långa resor med tåg, buss och flyg. Resor med buss och tåg bör inte vara
+            längre än en timme. Om du planerar en längre resa t ex charter inom de närmaste
+            veckorna kan det vara bättre att vänta med behandlingen tills du kommit hem igen.\n\n
+            Du kan åka hem i egen bil efter behandlingen. Du kan i de flesta fall också åka hem
+            med taxi eller bli skjutsad i bil om du sitter ensam i baksätet på motsatt sida av
+            föraren. Barn eller gravida kvinnor ska inte finnas med på resan. Du kan i de flesta
+            fall färdas med kommunala transportmedel som buss och tåg om restiden inte är längre
+            än en timme.
+        </restriction5>
+        <restriction6>
+            En stor del av radioaktiviteten kommer ut via urinen. Därför bör du, även om du är
+            man, sitta ned på toaletten. Spola två gånger efter dig. Det är viktigt att tvätta
+            händerna, helst inne på toaletten, för att undvika att dörrhandtag o.s.v. smutsas
+            ner av radioaktivitet. Om det går att ordna så att du har en egen toalett som ingen
+            annan använder så är det bra. Eftersom en liten del av radioaktiviteten lämnar kroppen
+            via svett, kan du använda egen handduk och i övrigt iaktta god hygien.
+        </restriction6>
+    </after>
+    <restrictions>
+        <title>
+            Mina restriktioner
+        </title>
+        <info>
+            När du får din behandling kommer behandlande sjukhusfysiker att
+            ge dig en kod som du kan använda för att fylla i det Gula Kortet
+            nedan. Det är en 8-siffrig kod som du fyller i genom att trycka på
+            den blåa knappen i det nedre högra hörnet.\n\nPå kortet finns sex
+            åtgärder för att minska bestrålningen av andra människor. När du
+            fyllt i din kod kommer kortet att innehålla datum för hur länge du
+            ska följa dessa. Antalet dagar beror på hur stor dos du får och hur
+            snabbt din kropp gör sig av med radioaktiviteten.
+        </info>
+        <more_info>
+            För att få reda på mer information, tryck på respektive åtgärd.
+            Läs igenom denna information före besöket så att du kan diskutera
+            eventuella frågor med behandlande sjukhusfysiker.
+        </more_info>
+    </restrictions>
+</content>
+
