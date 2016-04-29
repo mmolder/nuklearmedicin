@@ -116,9 +116,13 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fm = getSupportFragmentManager();
         int id = item.getItemId();
 
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
         if (id == R.id.nav_home) {
+            navigationView.getMenu().getItem(0).setChecked(true);
             fm.beginTransaction().replace(R.id.content_frame, new MainFragment()).commit();
         } else if (id == R.id.nav_rest) {
+            navigationView.getMenu().getItem(1).setChecked(true);
             fm.beginTransaction().replace(R.id.content_frame, new RestrictionFragment()).commit();
         }else if (id == R.id.nav_note) {
             fm.beginTransaction().replace(R.id.content_frame, new NotesFragment()).commit();
@@ -137,14 +141,19 @@ public class MainActivity extends AppCompatActivity
     public void mainFragmentButtonClick(View view) {
         FragmentManager fm = getSupportFragmentManager();
 
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
         switch(view.getId()) {
             case R.id.buttonBefore:
+                navigationView.getMenu().getItem(0).setChecked(false);
                 fm.beginTransaction().replace(R.id.content_frame, new BeforeFragment()).commit();
                 break;
             case R.id.buttonDuring:
+                navigationView.getMenu().getItem(0).setChecked(false);
                 fm.beginTransaction().replace(R.id.content_frame, new DuringFragment()).commit();
                 break;
             case R.id.buttonAfter:
+                navigationView.getMenu().getItem(0).setChecked(false);
                 fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
                 break;
         }
@@ -155,34 +164,41 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = new AfterFragment();;
         Bundle bundle = new Bundle();
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         switch(v.getId()){
             case R.id.rest1:
+                navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",1);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest2:
+                navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",2);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest3:
+                navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",3);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest4:
+                navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",4);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest5:
+                navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",5);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 break;
             case R.id.rest6:
+                navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",6);
                 fragment.setArguments(bundle);
                 fm.beginTransaction().replace(R.id.content_frame, fragment).commit();

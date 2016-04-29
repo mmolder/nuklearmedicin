@@ -98,6 +98,7 @@ public class RestrictionFragment extends Fragment {
                                     TextView test = (TextView) rootView.findViewById(R.id.test);
                                     test.setText(userInput.getText());
 
+                                    /* save user input to file in phone memory */
                                     try {
                                         FileOutputStream fileOutputStream = getContext().openFileOutput("user_code", Context.MODE_PRIVATE);
                                         fileOutputStream.write(userInput.getText().toString().getBytes());
