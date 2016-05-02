@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.nuklearmedicin.HandleXml;
 import com.nuklearmedicin.R;
 
 /**
@@ -48,29 +49,35 @@ public class AfterFragment extends Fragment {
         TextView rest6 = (TextView) rootView.findViewById(R.id.rest_6);
 
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/myfont.ttf");
-        /*
-        rest1.setTypeface(font);
-        rest2.setTypeface(font);
-        rest3.setTypeface(font);
-        rest4.setTypeface(font);
-        rest5.setTypeface(font);
-        rest6.setTypeface(font);
-        */
         title.setTypeface(font);
+
+        HandleXml handleXml = new HandleXml();
+        String restarray[] = handleXml.getContent(getContext(), 6, "After");
 
         /* hide some content */
         rest_1_content = (TextView) rootView.findViewById(R.id.rest_1_content);
         rest_1_content.setVisibility(View.GONE);
+        rest_1_content.setText(restarray[0].replace("\\n","\n"));
+
         rest_2_content = (TextView) rootView.findViewById(R.id.rest_2_content);
         rest_2_content.setVisibility(View.GONE);
+        rest_2_content.setText(restarray[1].replace("\\n","\n"));
+
         rest_3_content = (TextView) rootView.findViewById(R.id.rest_3_content);
         rest_3_content.setVisibility(View.GONE);
+        rest_3_content.setText(restarray[2].replace("\\n","\n"));
+
         rest_4_content = (TextView) rootView.findViewById(R.id.rest_4_content);
         rest_4_content.setVisibility(View.GONE);
+        rest_4_content.setText(restarray[3].replace("\\n","\n"));
+
         rest_5_content = (TextView) rootView.findViewById(R.id.rest_5_content);
         rest_5_content.setVisibility(View.GONE);
+        rest_5_content.setText(restarray[4].replace("\\n","\n"));
+
         rest_6_content = (TextView) rootView.findViewById(R.id.rest_6_content);
         rest_6_content.setVisibility(View.GONE);
+        rest_6_content.setText(restarray[5].replace("\\n","\n"));
 
         int showOnStart = 0;
         Bundle bundle = this.getArguments();

@@ -24,7 +24,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="När du får din behandling kommer behandlande sjukhusfysiker att ge dig en kod som du kan använda för att fylla i det Gula Kortet nedan. Det är en 8-siffrig kod som du fyller i genom att trycka på den blåa knappen i det nedre högra hörnet.\n\nPå kortet finns sex åtgärder för att minska bestrålningen av andra människor. När du fyllt i din kod kommer kortet att innehålla datum för hur länge du ska följa dessa. Antalet dagar beror på hur stor dos du får och hur snabbt din kropp gör sig av med radioaktiviteten. "
         android:id="@+id/desc_yellowcard"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
@@ -162,7 +161,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="För att få reda på mer information, tryck på respektive åtgärd. Läs igenom denna information före besöket så att du kan diskutera eventuella frågor med behandlande sjukhusfysiker. "/>
+            android:id="@+id/desc_yellowcard2" android:text="För att få reda på mer information, tryck på respektive åtgärd. Läs igenom denna information före besöket så att du kan diskutera eventuella frågor med behandlande sjukhusfysiker. "/>
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton

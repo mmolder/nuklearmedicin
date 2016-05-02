@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.nuklearmedicin.HandleXml;
 import com.nuklearmedicin.MainActivity;
 import com.nuklearmedicin.R;
 
@@ -40,6 +41,15 @@ public class RestrictionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         final View rootView = inflater.inflate(R.layout.fragment_restrictions, container, false);
+
+        HandleXml handleXml = new HandleXml();
+        String content[] = handleXml.getContent(getContext(), 2, "Restrictions");
+
+        TextView desc = (TextView) rootView.findViewById(R.id.desc_yellowcard);
+        desc.setText(content[0].replace("\\n","\n"));
+
+        TextView desc2 = (TextView) rootView.findViewById(R.id.desc_yellowcard2);
+        desc2.setText(content[1].replace("\\n","\n"));
 
         /* read user code from memory if there is one */
         readFromMemory(rootView);
