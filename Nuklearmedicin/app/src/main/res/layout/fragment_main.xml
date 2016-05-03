@@ -31,7 +31,7 @@
         <Button
             android:layout_width="281dp"
             android:layout_height="104dp"
-            android:text="Före"
+            android:text="Inför"
             android:textSize="35dp"
             android:textColor="#FFFFFF"
             android:id="@+id/buttonBefore"
