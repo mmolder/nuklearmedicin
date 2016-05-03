@@ -1,6 +1,9 @@
 package com.nuklearmedicin;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -25,6 +28,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nuklearmedicin.fragments.AfterFragment;
 import com.nuklearmedicin.fragments.BeforeFragment;
@@ -36,6 +40,8 @@ import com.nuklearmedicin.fragments.RestrictionFragment;
 import com.nuklearmedicin.fragments.SettingsFragment;
 
 import org.w3c.dom.Text;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -422,5 +428,13 @@ public class MainActivity extends AppCompatActivity
                 v.startAnimation(a);
             }
         }
+    }
+
+    public void setAlarm(Calendar targetCal, String message){
+        Intent intent = new Intent(getBaseContext(), MainActivity.class);
+        intent.putExtra(message, Boolean.FALSE);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getBaseContext(), 0, intent, 0);
+        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, targetCal.getTimeInMillis(), pendingIntent);
     }
 }
