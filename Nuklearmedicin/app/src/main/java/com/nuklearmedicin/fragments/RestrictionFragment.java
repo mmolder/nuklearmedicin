@@ -127,8 +127,8 @@ public class RestrictionFragment extends Fragment {
                                     } catch (IOException e) {
                                         e.printStackTrace();
                                     }
-                                    ((MainActivity)getActivity()).setAlarm(cal1, "Du kan nu vara nära vuxna personer");
-                                    ((MainActivity)getActivity()).setAlarm(cal2, "Du kan nu vara nära barn och gravida");
+                                    ((MainActivity)getActivity()).setAlarm(cal1);
+                                    //((MainActivity)getActivity()).setAlarm(cal2);
                                     Toast.makeText(getContext(),"Alarm set", Toast.LENGTH_LONG).show();
                                 }
                             }
@@ -175,48 +175,48 @@ public class RestrictionFragment extends Fragment {
                 case 0:
                     cal1.set(Calendar.DAY_OF_MONTH, date);
                     cal1.set(Calendar.MONTH, month-1);
-                    cal1.set(Calendar.HOUR_OF_DAY, 13);
-                    cal1.set(Calendar.MINUTE, 03);
+                    cal1.set(Calendar.HOUR_OF_DAY, 15);
+                    cal1.set(Calendar.MINUTE, 25);
                     cal1.add(Calendar.DATE, rest1);
                     r1 = sdf.format(cal1.getTime());
                     break;
                 case 1:
                     cal2.set(Calendar.DAY_OF_MONTH, date);
                     cal2.set(Calendar.MONTH, month-1);
-                    cal2.set(Calendar.HOUR_OF_DAY, 13);
-                    cal2.set(Calendar.MINUTE, 03);
+                    cal2.set(Calendar.HOUR_OF_DAY, 16);
+                    cal2.set(Calendar.MINUTE, 46);
                     cal2.add(Calendar.DATE, rest2);
                     r2 = sdf.format(cal2.getTime());
                     break;
                 case 2:
                     cal3.set(Calendar.DAY_OF_MONTH, date);
                     cal3.set(Calendar.MONTH, month-1);
-                    cal3.set(Calendar.HOUR_OF_DAY, 12);
-                    cal3.set(Calendar.MINUTE, 55);
+                    cal3.set(Calendar.HOUR_OF_DAY, 16);
+                    cal3.set(Calendar.MINUTE, 47);
                     cal3.add(Calendar.DATE, rest3);
                     r3 = sdf.format(cal3.getTime());
                     break;
                 case 3:
                     cal4.set(Calendar.DAY_OF_MONTH, date);
                     cal4.set(Calendar.MONTH, month-1);
-                    cal4.set(Calendar.HOUR_OF_DAY, 12);
-                    cal4.set(Calendar.MINUTE, 55);
+                    cal4.set(Calendar.HOUR_OF_DAY, 16);
+                    cal4.set(Calendar.MINUTE, 48);
                     cal4.add(Calendar.DATE, rest4);
                     r4 = sdf.format(cal4.getTime());
                     break;
                 case 4:
                     cal5.set(Calendar.DAY_OF_MONTH, date);
                     cal5.set(Calendar.MONTH, month-1);
-                    cal5.set(Calendar.HOUR_OF_DAY, 12);
-                    cal5.set(Calendar.MINUTE, 55);
+                    cal5.set(Calendar.HOUR_OF_DAY, 16);
+                    cal5.set(Calendar.MINUTE, 49);
                     cal5.add(Calendar.DATE, rest5);
                     r5 = sdf.format(cal5.getTime());
                     break;
                 case 5:
                     cal6.set(Calendar.DAY_OF_MONTH, date);
                     cal6.set(Calendar.MONTH, month-1);
-                    cal6.set(Calendar.HOUR_OF_DAY, 12);
-                    cal6.set(Calendar.MINUTE, 55);
+                    cal6.set(Calendar.HOUR_OF_DAY, 16);
+                    cal6.set(Calendar.MINUTE, 50);
                     cal6.add(Calendar.DATE, rest6);
                     r6 = sdf.format(cal6.getTime());
                     break;
