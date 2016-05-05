@@ -41,11 +41,14 @@ import com.nuklearmedicin.fragments.SettingsFragment;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    ArrayList<PendingIntent> intentArray = new ArrayList<PendingIntent>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,8 +160,6 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.buttonDuring:
                 navigationView.getMenu().getItem(0).setChecked(false);
-                Calendar cal = Calendar.getInstance();
-                setAlarm(cal);
                 fm.beginTransaction().replace(R.id.content_frame, new DuringFragment()).commit();
                 break;
             case R.id.buttonAfter:
@@ -433,12 +434,12 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public void setAlarm(Calendar targetCal){
+    public void setAlarm(Calendar targetCal, int rest){
         Long alertTime = new GregorianCalendar().getTimeInMillis()+5*1000;
+
         Intent intent = new Intent(this, AlertReceiver.class);
-        //intent.putExtra(message, Boolean.FALSE);
-        //PendingIntent pendingIntent = PendingIntent.getBroadcast(getBaseContext(), 0, intent, 0);
+        intent.putExtra("rest", rest);
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, alertTime, PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT));
+        alarmManager.set(AlarmManager.RTC_WAKEUP, targetCal.getTimeInMillis(), PendingIntent.getBroadcast(this, rest, intent, 0));
     }
 }

@@ -120,15 +120,15 @@ public class RestrictionFragment extends Fragment {
                                         FileOutputStream fileOutputStream = getContext().openFileOutput("user_code", Context.MODE_PRIVATE);
                                         fileOutputStream.write(userInput.getText().toString().getBytes());
                                         fileOutputStream.close();
-                                        parseUserInput(userInput.toString(), rootView);
+                                        parseUserInput(userInput.getText().toString(), rootView);
                                         dialog.cancel();
                                     } catch (FileNotFoundException e) {
                                         e.printStackTrace();
                                     } catch (IOException e) {
                                         e.printStackTrace();
                                     }
-                                    ((MainActivity)getActivity()).setAlarm(cal1);
-                                    //((MainActivity)getActivity()).setAlarm(cal2);
+                                    ((MainActivity)getActivity()).setAlarm(cal1, 1);
+                                    ((MainActivity)getActivity()).setAlarm(cal2, 2);
                                     Toast.makeText(getContext(),"Alarm set", Toast.LENGTH_LONG).show();
                                 }
                             }
@@ -175,16 +175,16 @@ public class RestrictionFragment extends Fragment {
                 case 0:
                     cal1.set(Calendar.DAY_OF_MONTH, date);
                     cal1.set(Calendar.MONTH, month-1);
-                    cal1.set(Calendar.HOUR_OF_DAY, 15);
-                    cal1.set(Calendar.MINUTE, 25);
+                    cal1.set(Calendar.HOUR_OF_DAY, 10);
+                    cal1.set(Calendar.MINUTE, 23);
                     cal1.add(Calendar.DATE, rest1);
                     r1 = sdf.format(cal1.getTime());
                     break;
                 case 1:
                     cal2.set(Calendar.DAY_OF_MONTH, date);
                     cal2.set(Calendar.MONTH, month-1);
-                    cal2.set(Calendar.HOUR_OF_DAY, 16);
-                    cal2.set(Calendar.MINUTE, 46);
+                    cal2.set(Calendar.HOUR_OF_DAY, 10);
+                    cal2.set(Calendar.MINUTE, 23);
                     cal2.add(Calendar.DATE, rest2);
                     r2 = sdf.format(cal2.getTime());
                     break;
