@@ -462,9 +462,107 @@ public class MainActivity extends AppCompatActivity
                     slide_down(this, rest_6_content);
                 }
                 break;
-
         }
+    }
 
+    /* handle button clicks from during fragment */
+    public void toggle_contents_3(View v){
+        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(DrawerLayout.LayoutParams.MATCH_PARENT, DrawerLayout.LayoutParams.MATCH_PARENT);
+        Drawable arrowUp = getResources().getDrawable(R.mipmap.ic_expand_less_white_24dp);
+        Drawable arrowDown = getResources().getDrawable(R.mipmap.ic_expand_more_white_24dp);
+        switch(v.getId()){
+            case R.id.during_1:
+                TextView during_1_content = (TextView) findViewById(R.id.during_1_content);
+                TextView during_1 = (TextView) findViewById(R.id.during_1);
+
+                if(during_1_content.isShown()){
+                    /* slide up animation */
+                    slide_up(this, during_1_content);
+                    /* set bottom margin */
+                    llp.setMargins(0,0,0,20);
+                    during_1.setLayoutParams(llp);
+                    /* change icon to arrow down */
+                    during_1.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
+                    /* change all corners to rounded */
+                    during_1.setBackgroundResource(R.drawable.button_corners);
+                    /* hide content */
+                    during_1_content.setVisibility(View.GONE);
+                }
+                else{
+                    /* show content */
+                    during_1_content.setVisibility(View.VISIBLE);
+                    /* set all margins to 0 */
+                    llp.setMargins(0,0,0,0);
+                    during_1.setLayoutParams(llp);
+                    /* change icon to arrow up */
+                    during_1.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                    /* remove two rounded corners */
+                    during_1.setBackgroundResource(R.drawable.rest_corner);
+                    /* slide down animation */
+                    slide_down(this, during_1_content);
+                }
+                break;
+            case R.id.during_2:
+                TextView during_2_content = (TextView) findViewById(R.id.during_2_content);
+                TextView during_2 = (TextView) findViewById(R.id.during_2);
+                if(during_2_content.isShown()){
+                    /* slide up animation */
+                    slide_up(this, during_2_content);
+                    /* set bottom margin */
+                    llp.setMargins(0,0,0,20);
+                    during_2.setLayoutParams(llp);
+                    /* change icon to arrow down */
+                    during_2.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
+                    /* change all corners to rounded */
+                    during_2.setBackgroundResource(R.drawable.button_corners);
+                     /* hide content */
+                    during_2_content.setVisibility(View.GONE);
+                }
+                else{
+                    /* show content */
+                    during_2_content.setVisibility(View.VISIBLE);
+                    /* set all margins to 0 */
+                    llp.setMargins(0,0,0,0);
+                    during_2.setLayoutParams(llp);
+                    /* change icon to arrow up */
+                    during_2.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                    /* remove two rounded corners */
+                    during_2.setBackgroundResource(R.drawable.rest_corner);
+                    /* slide down animation */
+                    slide_down(this, during_2_content);
+                }
+                break;
+            case R.id.during_3:
+                TextView during_3_content = (TextView) findViewById(R.id.during_3_content);
+                TextView during_3 = (TextView) findViewById(R.id.during_3);
+                if(during_3_content.isShown()){
+                    /* slide up animation */
+                    slide_up(this, during_3_content);
+                    /* set bottom margin */
+                    llp.setMargins(0,0,0,20);
+                    during_3.setLayoutParams(llp);
+                    /* change icon to arrow down */
+                    during_3.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
+                    /* change all corners to rounded */
+                    during_3.setBackgroundResource(R.drawable.button_corners);
+                     /* hide content */
+                    during_3_content.setVisibility(View.GONE);
+                }
+                else{
+                    /* show content */
+                    during_3_content.setVisibility(View.VISIBLE);
+                    /* set all margins to 0 */
+                    llp.setMargins(0,0,0,0);
+                    during_3.setLayoutParams(llp);
+                    /* change icon to arrow up */
+                    during_3.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                    /* remove two rounded corners */
+                    during_3.setBackgroundResource(R.drawable.rest_corner);
+                    /* slide down animation */
+                    slide_down(this, during_3_content);
+                }
+                break;
+        }
     }
 
     /* slide down animation for after fragment */
