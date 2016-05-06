@@ -4,15 +4,11 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -24,26 +20,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.nuklearmedicin.fragments.AfterFragment;
 import com.nuklearmedicin.fragments.BeforeFragment;
 import com.nuklearmedicin.fragments.ContactFragment;
 import com.nuklearmedicin.fragments.DuringFragment;
 import com.nuklearmedicin.fragments.MainFragment;
-import com.nuklearmedicin.fragments.NotesFragment;
 import com.nuklearmedicin.fragments.RestrictionFragment;
 import com.nuklearmedicin.fragments.SettingsFragment;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -134,9 +123,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_rest) {
             navigationView.getMenu().getItem(1).setChecked(true);
             fm.beginTransaction().replace(R.id.content_frame, new RestrictionFragment()).commit();
-        }else if (id == R.id.nav_note) {
-            fm.beginTransaction().replace(R.id.content_frame, new NotesFragment()).commit();
-        } else if (id == R.id.nav_contact) {
+        }else if (id == R.id.nav_contact) {
             fm.beginTransaction().replace(R.id.content_frame, new ContactFragment()).commit();
         } else if (id == R.id.nav_settings) {
             fm.beginTransaction().replace(R.id.content_frame, new SettingsFragment()).commit();

@@ -20,32 +20,32 @@ public class AlertReceiver extends BroadcastReceiver {
         Bundle extra = intent.getExtras();
 
         if(extra.getInt("rest") == 1){
-            title = "Rest1";
+            title = "Restriktion 1 har nu löpt ut";
             ticker = "Alert!";
-            content = "Du får nu vara....";
+            content = "";
             rest = 1;
         } else if(extra.getInt("rest") == 2){
-            title = "Rest2";
+            title = "Restriktion 2 har nu löpt ut";
             ticker = "Alert!";
             content = "Sluta upp med...";
             rest = 2;
         } else if(extra.getInt("rest") == 3){
-            title = "Rest3";
+            title = "Restriktion 3 har nu löpt ut";
             ticker = "Alert!";
             content = "Hjääälp!!!!";
             rest = 3;
         } else if(extra.getInt("rest") == 4){
-            title = "Rest4";
+            title = "Restriktion 4 har nu löpt ut";
             ticker = "Alert!";
             content = "Lägg ner!";
             rest = 4;
         } else if(extra.getInt("rest") == 5){
-            title = "Rest5";
+            title = "Restriktion 5 har nu löpt ut";
             ticker = "Alert!";
             content = "Res på!";
             rest = 5;
         } else if(extra.getInt("rest") == 6){
-            title = "Rest6";
+            title = "Restriktion 6 har nu löpt ut";
             ticker = "Alert!";
             content = "Toalett";
             rest = 6;
