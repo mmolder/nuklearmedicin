@@ -44,6 +44,8 @@ public class HandleXml {
         String expr[] = new String[num];
         switch (fragment) {
             case "Before":
+                expr[0] = "/content/before/pregnant";
+                expr[1] = "/content/before/medicine1";
                 break;
             case "During":
                 expr[0] = "/content/during/desc";

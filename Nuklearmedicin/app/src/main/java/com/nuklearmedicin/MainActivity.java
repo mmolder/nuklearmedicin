@@ -204,6 +204,76 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    /*handle button clicks from before fragment */
+    public void toggle_contents2(View v){
+        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(DrawerLayout.LayoutParams.MATCH_PARENT, DrawerLayout.LayoutParams.MATCH_PARENT);
+        Drawable arrowUp = getResources().getDrawable(R.mipmap.ic_expand_less_white_24dp);
+        Drawable arrowDown = getResources().getDrawable(R.mipmap.ic_expand_more_white_24dp);
+        switch(v.getId()){
+            case R.id.pregnant:
+                TextView pregnant_info = (TextView) findViewById(R.id.pregnant_info);
+                TextView pregant = (TextView) findViewById(R.id.pregnant);
+
+                if(pregnant_info.isShown()){
+                    /* slide up animation */
+                    slide_up(this, pregnant_info);
+                    /* set bottom margin */
+                    llp.setMargins(0,0,0,20);
+                    pregant.setLayoutParams(llp);
+                    /* change icon to arrow down */
+                    pregant.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
+                    /* change all corners to rounded */
+                    pregant.setBackgroundResource(R.drawable.button_corners);
+                    /* hide content */
+                    pregnant_info.setVisibility(View.GONE);
+                }
+                else{
+                    /* show content */
+                    pregnant_info.setVisibility(View.VISIBLE);
+                    /* set all margins to 0 */
+                    llp.setMargins(0,0,0,0);
+                    pregant.setLayoutParams(llp);
+                    /* change icon to arrow up */
+                    pregant.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                    /* remove two rounded corners */
+                    pregant.setBackgroundResource(R.drawable.rest_corner);
+                    /* slide down animation */
+                    slide_down(this, pregnant_info);
+                }
+                break;
+            case R.id.medic:
+                TextView medic_info = (TextView) findViewById(R.id.medic_info);
+                TextView medic = (TextView) findViewById(R.id.medic);
+
+                if(medic_info.isShown()){
+                    /* slide up animation */
+                    slide_up(this, medic_info);
+                    /* set bottom margin */
+                    llp.setMargins(0,0,0,20);
+                    medic.setLayoutParams(llp);
+                    /* change icon to arrow down */
+                    medic.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
+                    /* change all corners to rounded */
+                    medic.setBackgroundResource(R.drawable.button_corners);
+                    /* hide content */
+                    medic_info.setVisibility(View.GONE);
+                }
+                else{
+                    /* show content */
+                    medic_info.setVisibility(View.VISIBLE);
+                    /* set all margins to 0 */
+                    llp.setMargins(0,0,0,0);
+                    medic.setLayoutParams(llp);
+                    /* change icon to arrow up */
+                    medic.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                    /* remove two rounded corners */
+                    medic.setBackgroundResource(R.drawable.rest_corner);
+                    /* slide down animation */
+                    slide_down(this, medic_info);
+                }
+                break;
+    }}
+
     /* handle button clicks from after fragment */
     public void toggle_contents(View v){
         LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(DrawerLayout.LayoutParams.MATCH_PARENT, DrawerLayout.LayoutParams.MATCH_PARENT);
