@@ -174,48 +174,48 @@ public class RestrictionFragment extends Fragment {
                 case 0:
                     cal1.set(Calendar.DAY_OF_MONTH, date);
                     cal1.set(Calendar.MONTH, month-1);
-                    cal1.set(Calendar.HOUR_OF_DAY, 10);
-                    cal1.set(Calendar.MINUTE, 23);
+                    cal1.set(Calendar.HOUR_OF_DAY, 11);
+                    cal1.set(Calendar.MINUTE, 55);
                     cal1.add(Calendar.DATE, rest1);
                     r1 = sdf.format(cal1.getTime());
                     break;
                 case 1:
                     cal2.set(Calendar.DAY_OF_MONTH, date);
                     cal2.set(Calendar.MONTH, month-1);
-                    cal2.set(Calendar.HOUR_OF_DAY, 10);
-                    cal2.set(Calendar.MINUTE, 23);
+                    cal2.set(Calendar.HOUR_OF_DAY, 11);
+                    cal2.set(Calendar.MINUTE, 55);
                     cal2.add(Calendar.DATE, rest2);
                     r2 = sdf.format(cal2.getTime());
                     break;
                 case 2:
                     cal3.set(Calendar.DAY_OF_MONTH, date);
                     cal3.set(Calendar.MONTH, month-1);
-                    cal3.set(Calendar.HOUR_OF_DAY, 16);
-                    cal3.set(Calendar.MINUTE, 47);
+                    cal3.set(Calendar.HOUR_OF_DAY, 11);
+                    cal3.set(Calendar.MINUTE, 55);
                     cal3.add(Calendar.DATE, rest3);
                     r3 = sdf.format(cal3.getTime());
                     break;
                 case 3:
                     cal4.set(Calendar.DAY_OF_MONTH, date);
                     cal4.set(Calendar.MONTH, month-1);
-                    cal4.set(Calendar.HOUR_OF_DAY, 16);
-                    cal4.set(Calendar.MINUTE, 48);
+                    cal4.set(Calendar.HOUR_OF_DAY, 11);
+                    cal4.set(Calendar.MINUTE, 55);
                     cal4.add(Calendar.DATE, rest4);
                     r4 = sdf.format(cal4.getTime());
                     break;
                 case 4:
                     cal5.set(Calendar.DAY_OF_MONTH, date);
                     cal5.set(Calendar.MONTH, month-1);
-                    cal5.set(Calendar.HOUR_OF_DAY, 16);
-                    cal5.set(Calendar.MINUTE, 49);
+                    cal5.set(Calendar.HOUR_OF_DAY, 11);
+                    cal5.set(Calendar.MINUTE, 55);
                     cal5.add(Calendar.DATE, rest5);
                     r5 = sdf.format(cal5.getTime());
                     break;
                 case 5:
                     cal6.set(Calendar.DAY_OF_MONTH, date);
                     cal6.set(Calendar.MONTH, month-1);
-                    cal6.set(Calendar.HOUR_OF_DAY, 16);
-                    cal6.set(Calendar.MINUTE, 50);
+                    cal6.set(Calendar.HOUR_OF_DAY, 11);
+                    cal6.set(Calendar.MINUTE, 55);
                     cal6.add(Calendar.DATE, rest6);
                     r6 = sdf.format(cal6.getTime());
                     break;

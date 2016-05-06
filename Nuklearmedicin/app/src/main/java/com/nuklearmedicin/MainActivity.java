@@ -436,7 +436,12 @@ public class MainActivity extends AppCompatActivity
 
     public void setAlarm(Calendar targetCal, int rest){
         Calendar cal = Calendar.getInstance();
-        
+        Long currentTime = cal.getTimeInMillis();
+        Long alarmTime = targetCal.getTimeInMillis();
+        /* if date has already passed, don't set alarm */
+        if(alarmTime < currentTime){
+            return;
+        }
         Intent intent = new Intent(this, AlertReceiver.class);
         intent.putExtra("rest", rest);
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
