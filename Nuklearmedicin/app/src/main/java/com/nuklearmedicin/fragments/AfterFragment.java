@@ -31,6 +31,7 @@ public class AfterFragment extends Fragment {
     TextView rest_4_content;
     TextView rest_5_content;
     TextView rest_6_content;
+    TextView undertitle;
 
     @Nullable
     @Override
@@ -52,7 +53,7 @@ public class AfterFragment extends Fragment {
         title.setTypeface(font);
 
         HandleXml handleXml = new HandleXml();
-        String restarray[] = handleXml.getContent(getContext(), 6, "After");
+        String restarray[] = handleXml.getContent(getContext(), 7, "After");
 
         /* hide some content */
         rest_1_content = (TextView) rootView.findViewById(R.id.rest_1_content);
@@ -78,6 +79,9 @@ public class AfterFragment extends Fragment {
         rest_6_content = (TextView) rootView.findViewById(R.id.rest_6_content);
         rest_6_content.setVisibility(View.GONE);
         rest_6_content.setText(restarray[5].replace("\\n","\n"));
+
+        undertitle = (TextView) rootView.findViewById(R.id.after_undertitle);
+        undertitle.setText(restarray[6].replace("\\n","\n"));
 
         int showOnStart = 0;
         Bundle bundle = this.getArguments();

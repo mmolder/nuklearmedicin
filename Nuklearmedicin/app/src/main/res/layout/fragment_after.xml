@@ -29,6 +29,11 @@
                     android:paddingTop="10dp"
                     android:layout_marginBottom="35dp"
                     android:textSize="35dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/after_undertitle"
+                    android:textSize="20dp"/>
                 <!-- activity_info layout file -->
                 <!-- Clickable title -->
                 <TextView  android:id="@+id/rest_1"

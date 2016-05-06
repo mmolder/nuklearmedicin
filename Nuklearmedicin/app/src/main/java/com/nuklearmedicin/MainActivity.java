@@ -23,6 +23,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.nuklearmedicin.fragments.AboutFragment;
 import com.nuklearmedicin.fragments.AfterFragment;
 import com.nuklearmedicin.fragments.BeforeFragment;
 import com.nuklearmedicin.fragments.ContactFragment;
@@ -125,6 +126,8 @@ public class MainActivity extends AppCompatActivity
             fm.beginTransaction().replace(R.id.content_frame, new RestrictionFragment()).addToBackStack("").commit();
         }else if (id == R.id.nav_contact) {
             fm.beginTransaction().replace(R.id.content_frame, new ContactFragment()).addToBackStack("").commit();
+        } else if(id == R.id.nav_about) {
+            fm.beginTransaction().replace(R.id.content_frame, new AboutFragment()).addToBackStack("").commit();
         } else if (id == R.id.nav_settings) {
             fm.beginTransaction().replace(R.id.content_frame, new SettingsFragment()).addToBackStack("").commit();
         }
