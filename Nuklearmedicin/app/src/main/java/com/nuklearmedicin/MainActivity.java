@@ -272,6 +272,68 @@ public class MainActivity extends AppCompatActivity
                     slide_down(this, medic_info);
                 }
                 break;
+            case R.id.earlier:
+                TextView earlier_info = (TextView) findViewById(R.id.earlier_info);
+                TextView earlier = (TextView) findViewById(R.id.earlier);
+
+                if(earlier_info.isShown()){
+                    /* slide up animation */
+                    slide_up(this, earlier_info);
+                    /* set bottom margin */
+                    llp.setMargins(0,0,0,20);
+                    earlier.setLayoutParams(llp);
+                    /* change icon to arrow down */
+                    earlier.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
+                    /* change all corners to rounded */
+                    earlier.setBackgroundResource(R.drawable.button_corners);
+                    /* hide content */
+                    earlier_info.setVisibility(View.GONE);
+                }
+                else{
+                    /* show content */
+                    earlier_info.setVisibility(View.VISIBLE);
+                    /* set all margins to 0 */
+                    llp.setMargins(0,0,0,0);
+                    earlier.setLayoutParams(llp);
+                    /* change icon to arrow up */
+                    earlier.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                    /* remove two rounded corners */
+                    earlier.setBackgroundResource(R.drawable.rest_corner);
+                    /* slide down animation */
+                    slide_down(this, earlier_info);
+                }
+                break;
+            case R.id.other:
+                TextView other_info = (TextView) findViewById(R.id.other_info);
+                TextView other = (TextView) findViewById(R.id.other);
+
+                if(other_info.isShown()){
+                    /* slide up animation */
+                    slide_up(this, other_info);
+                    /* set bottom margin */
+                    llp.setMargins(0,0,0,20);
+                    other.setLayoutParams(llp);
+                    /* change icon to arrow down */
+                    other.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
+                    /* change all corners to rounded */
+                    other.setBackgroundResource(R.drawable.button_corners);
+                    /* hide content */
+                    other_info.setVisibility(View.GONE);
+                }
+                else{
+                    /* show content */
+                    other_info.setVisibility(View.VISIBLE);
+                    /* set all margins to 0 */
+                    llp.setMargins(0,0,0,0);
+                    other.setLayoutParams(llp);
+                    /* change icon to arrow up */
+                    other.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                    /* remove two rounded corners */
+                    other.setBackgroundResource(R.drawable.rest_corner);
+                    /* slide down animation */
+                    slide_down(this, other_info);
+                }
+                break;
     }}
 
     /* handle button clicks from after fragment */

@@ -29,7 +29,7 @@
             android:paddingTop="10dp" />
 
         <ScrollView
-            android:id="@+id/scroll_view"
+            android:id="@+id/beforescroll"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -100,7 +100,7 @@
                 <TextView  android:id="@+id/earlier"
                     android:text="Tidigare undersökning"
                     android:clickable="true"
-                    android:onClick="toggle_contents"
+                    android:onClick="toggle_contents2"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:background="@drawable/button_corners"
@@ -126,7 +126,7 @@
                 <TextView  android:id="@+id/other"
                     android:text="Övrigt"
                     android:clickable="true"
-                    android:onClick="toggle_contents"
+                    android:onClick="toggle_contents2"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:background="@drawable/button_corners"
