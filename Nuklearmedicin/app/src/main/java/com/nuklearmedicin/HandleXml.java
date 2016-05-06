@@ -61,6 +61,7 @@ public class HandleXml {
                 expr[3] = "/content/after/restriction_4";
                 expr[4] = "/content/after/restriction_5";
                 expr[5] = "/content/after/restriction_6";
+                expr[6] = "/content/after/undertitle";
                 break;
             case "Restrictions":
                 expr[0] = "/content/restrictions/info";

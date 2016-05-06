@@ -8,17 +8,6 @@
         android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal|top">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="EFTER BEHANDLINGEN"
-            android:id="@+id/title_after_fragment"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="10dp"
-            android:layout_marginBottom="35dp"
-            android:textSize="35dp" />
-
         <ScrollView
             android:id="@+id/scroll_view"
             android:layout_width="fill_parent"
@@ -30,7 +19,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="EFTER BEHANDLINGEN"
+                    android:id="@+id/title_after_fragment"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="10dp"
+                    android:layout_marginBottom="35dp"
+                    android:textSize="35dp" />
                 <!-- activity_info layout file -->
                 <!-- Clickable title -->
                 <TextView  android:id="@+id/rest_1"
