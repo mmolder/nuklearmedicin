@@ -119,14 +119,14 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             navigationView.getMenu().getItem(0).setChecked(true);
-            fm.beginTransaction().replace(R.id.content_frame, new MainFragment()).commit();
+            fm.beginTransaction().replace(R.id.content_frame, new MainFragment()).addToBackStack("").commit();
         } else if (id == R.id.nav_rest) {
             navigationView.getMenu().getItem(1).setChecked(true);
-            fm.beginTransaction().replace(R.id.content_frame, new RestrictionFragment()).commit();
+            fm.beginTransaction().replace(R.id.content_frame, new RestrictionFragment()).addToBackStack("").commit();
         }else if (id == R.id.nav_contact) {
-            fm.beginTransaction().replace(R.id.content_frame, new ContactFragment()).commit();
+            fm.beginTransaction().replace(R.id.content_frame, new ContactFragment()).addToBackStack("").commit();
         } else if (id == R.id.nav_settings) {
-            fm.beginTransaction().replace(R.id.content_frame, new SettingsFragment()).commit();
+            fm.beginTransaction().replace(R.id.content_frame, new SettingsFragment()).addToBackStack("").commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -143,15 +143,15 @@ public class MainActivity extends AppCompatActivity
         switch(view.getId()) {
             case R.id.buttonBefore:
                 navigationView.getMenu().getItem(0).setChecked(false);
-                fm.beginTransaction().replace(R.id.content_frame, new BeforeFragment()).commit();
+                fm.beginTransaction().replace(R.id.content_frame, new BeforeFragment()).addToBackStack("").commit();
                 break;
             case R.id.buttonDuring:
                 navigationView.getMenu().getItem(0).setChecked(false);
-                fm.beginTransaction().replace(R.id.content_frame, new DuringFragment()).commit();
+                fm.beginTransaction().replace(R.id.content_frame, new DuringFragment()).addToBackStack("").commit();
                 break;
             case R.id.buttonAfter:
                 navigationView.getMenu().getItem(0).setChecked(false);
-                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).commit();
+                fm.beginTransaction().replace(R.id.content_frame, new AfterFragment()).addToBackStack("").commit();
                 break;
         }
     }
@@ -168,37 +168,37 @@ public class MainActivity extends AppCompatActivity
                 navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",1);
                 fragment.setArguments(bundle);
-                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
+                fm.beginTransaction().replace(R.id.content_frame, fragment).addToBackStack("").commit();
                 break;
             case R.id.rest2:
                 navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",2);
                 fragment.setArguments(bundle);
-                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
+                fm.beginTransaction().replace(R.id.content_frame, fragment).addToBackStack("").commit();
                 break;
             case R.id.rest3:
                 navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",3);
                 fragment.setArguments(bundle);
-                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
+                fm.beginTransaction().replace(R.id.content_frame, fragment).addToBackStack("").commit();
                 break;
             case R.id.rest4:
                 navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",4);
                 fragment.setArguments(bundle);
-                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
+                fm.beginTransaction().replace(R.id.content_frame, fragment).addToBackStack("").commit();
                 break;
             case R.id.rest5:
                 navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",5);
                 fragment.setArguments(bundle);
-                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
+                fm.beginTransaction().replace(R.id.content_frame, fragment).addToBackStack("").commit();
                 break;
             case R.id.rest6:
                 navigationView.getMenu().getItem(1).setChecked(false);
                 bundle.putInt("rest",6);
                 fragment.setArguments(bundle);
-                fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
+                fm.beginTransaction().replace(R.id.content_frame, fragment).addToBackStack("").commit();
                 break;
         }
 
