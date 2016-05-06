@@ -9,25 +9,6 @@
         android:layout_gravity="center_horizontal|top"
         android:weightSum="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Inför behandlingen"
-            android:id="@+id/textView9"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Dag 1 och 2 får du träffa sjuksköterska/undersköterska. Dag 2 får du även träffa läkare. blablbalbalbalblabllblablblalblablablblablablablabllblblabalblablablabllalblablab"
-            android:id="@+id/textView12"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.34"
-            android:paddingTop="10dp" />
-
         <ScrollView
             android:id="@+id/beforescroll"
             android:layout_width="fill_parent"
@@ -35,12 +16,31 @@
             android:scrollbars="vertical"
             android:fillViewport="true">
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <!-- activity_info layout file -->
-                <!-- Clickable title -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Inför behandlingen"
+                    android:id="@+id/textView9"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Dag 1 och 2 får du träffa sjuksköterska/undersköterska. Dag 2 får du även träffa läkare. blablbalbalbalblabllblablblalblablablblablablablabllblblabalblablablabllalblablab"
+                    android:id="@+id/textView12"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.34"
+                    android:paddingTop="10dp"
+                    android:layout_marginBottom="35dp"/>
                 <TextView
                     android:id="@+id/pregnant"
                     android:text="Graviditet"
