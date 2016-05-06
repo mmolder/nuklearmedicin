@@ -110,6 +110,5 @@
                     android:textSize="20dp" />
             </LinearLayout>
         </ScrollView>
-
     </LinearLayout>
 </FrameLayout>
