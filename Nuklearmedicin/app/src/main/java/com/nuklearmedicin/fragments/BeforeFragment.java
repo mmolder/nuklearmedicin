@@ -19,6 +19,8 @@ import android.widget.TextView;
 import com.nuklearmedicin.HandleXml;
 import com.nuklearmedicin.R;
 
+import org.w3c.dom.Text;
+
 /**
  * Created by mikae on 2016-04-15.
  */
@@ -27,6 +29,7 @@ public class BeforeFragment extends Fragment {
     TextView medic_info;
     TextView earlier_info;
     TextView other_info;
+    TextView textView12;
 
     @Nullable
     @Override
@@ -41,12 +44,13 @@ public class BeforeFragment extends Fragment {
         TextView rest2 = (TextView) rootView.findViewById(R.id.medic);
         TextView rest3 = (TextView) rootView.findViewById(R.id.earlier);
         TextView rest4 = (TextView) rootView.findViewById(R.id.other);
+        TextView rest5 = (TextView) rootView.findViewById(R.id.before_undertitle);
 
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/myfont.ttf");
         //title.setTypeface(font);
 
         HandleXml handleXml = new HandleXml();
-        String restarray[] = handleXml.getContent(getContext(), 4, "Before");
+        String restarray[] = handleXml.getContent(getContext(), 5, "Before");
 
 
         pregnant_info = (TextView) rootView.findViewById(R.id.pregnant_info);
@@ -64,6 +68,9 @@ public class BeforeFragment extends Fragment {
         other_info = (TextView) rootView.findViewById(R.id.other_info);
         other_info.setVisibility(View.GONE);
         other_info.setText(restarray[3].replace("\\n", "\n"));
+
+        textView12 = (TextView) rootView.findViewById(R.id.before_undertitle);
+        textView12.setText(restarray[4].replace("\\n", "\n"));
 
         int showOnStart = 0;
         Bundle bundle = this.getArguments();
