@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.nuklearmedicin.HandleXml;
 import com.nuklearmedicin.R;
 
 /**
@@ -30,6 +31,14 @@ public class MainFragment extends Fragment {
         beforeButton.setTypeface(font);
         duringButton.setTypeface(font);
         afterButton.setTypeface(font);
+
+        TextView intro = (TextView) rootView.findViewById(R.id.intro);
+        HandleXml handleXml = new HandleXml();
+        String restarray[] = handleXml.getContent(getContext(), 1, "Main");
+
+
+        intro = (TextView) rootView.findViewById(R.id.intro);
+        intro.setText(restarray[0].replace("\\n", "\n"));
 
         return rootView;
 

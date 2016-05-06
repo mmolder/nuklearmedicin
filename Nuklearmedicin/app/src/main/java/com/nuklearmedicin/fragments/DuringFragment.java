@@ -19,6 +19,7 @@ public class DuringFragment extends Fragment {
     TextView during_1_content;
     TextView during_2_content;
     TextView during_3_content;
+    TextView during_4_content;
 
     @Nullable
     @Override
@@ -27,7 +28,7 @@ public class DuringFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_during, container, false);
 
         HandleXml handleXml = new HandleXml();
-        String restarray[] = handleXml.getContent(getContext(), 3, "During");
+        String restarray[] = handleXml.getContent(getContext(), 4, "During");
 
         during_1_content = (TextView) rootView.findViewById(R.id.during_1_content);
         during_1_content.setVisibility(View.GONE);
@@ -40,6 +41,9 @@ public class DuringFragment extends Fragment {
         during_3_content = (TextView) rootView.findViewById(R.id.during_3_content);
         during_3_content.setVisibility(View.GONE);
         during_3_content.setText(restarray[2].replace("\\n","\n"));
+
+        during_4_content = (TextView) rootView.findViewById(R.id.during_fragment_undertitle);
+        during_4_content.setText(restarray[3].replace("\\n","\n"));
 
         return rootView;
 
