@@ -52,6 +52,7 @@ public class HandleXml {
             case "During":
                 expr[0] = "/content/during/desc";
                 expr[1] = "/content/during/desc_2";
+                expr[2] = "/content/during/desc_3";
                 break;
             case "After":
                 expr[0] = "/content/after/restriction_1";
