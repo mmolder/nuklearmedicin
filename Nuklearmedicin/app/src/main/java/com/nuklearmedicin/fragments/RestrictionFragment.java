@@ -165,7 +165,9 @@ public class RestrictionFragment extends Fragment {
         rest5 = restArray[6];
         rest6 = restArray[7];
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM");
+        SimpleDateFormat day = new SimpleDateFormat("dd");
+        SimpleDateFormat mon = new SimpleDateFormat("MM");
+        SimpleDateFormat year = new SimpleDateFormat("yy");
 
         /*cal.set(Calendar.YEAR, cal.get(Calendar.YEAR));*/
 
@@ -177,7 +179,9 @@ public class RestrictionFragment extends Fragment {
                     cal1.set(Calendar.HOUR_OF_DAY, 11);
                     cal1.set(Calendar.MINUTE, 55);
                     cal1.add(Calendar.DATE, rest1);
-                    r1 = sdf.format(cal1.getTime());
+                    r1 = day.format(cal1.getTime()).replaceFirst("^0+(?!$)", "");
+                    r1 += "/" + mon.format(cal1.getTime()).replaceFirst("^0+(?!$)", "");
+                    r1 += "-" + year.format(cal1.getTime()).replaceFirst("^0+(?!$)", "");
                     break;
                 case 1:
                     cal2.set(Calendar.DAY_OF_MONTH, date);
@@ -185,7 +189,9 @@ public class RestrictionFragment extends Fragment {
                     cal2.set(Calendar.HOUR_OF_DAY, 11);
                     cal2.set(Calendar.MINUTE, 55);
                     cal2.add(Calendar.DATE, rest2);
-                    r2 = sdf.format(cal2.getTime());
+                    r2 = day.format(cal2.getTime()).replaceFirst("^0+(?!$)", "");
+                    r2 += "/" + mon.format(cal2.getTime()).replaceFirst("^0+(?!$)", "");
+                    r2 += "-" + year.format(cal2.getTime()).replaceFirst("^0+(?!$)", "");
                     break;
                 case 2:
                     cal3.set(Calendar.DAY_OF_MONTH, date);
@@ -193,7 +199,9 @@ public class RestrictionFragment extends Fragment {
                     cal3.set(Calendar.HOUR_OF_DAY, 11);
                     cal3.set(Calendar.MINUTE, 55);
                     cal3.add(Calendar.DATE, rest3);
-                    r3 = sdf.format(cal3.getTime());
+                    r3 = day.format(cal3.getTime()).replaceFirst("^0+(?!$)", "");
+                    r3 += "/" + mon.format(cal3.getTime()).replaceFirst("^0+(?!$)", "");
+                    r3 += "-" + year.format(cal3.getTime()).replaceFirst("^0+(?!$)", "");
                     break;
                 case 3:
                     cal4.set(Calendar.DAY_OF_MONTH, date);
@@ -201,7 +209,9 @@ public class RestrictionFragment extends Fragment {
                     cal4.set(Calendar.HOUR_OF_DAY, 11);
                     cal4.set(Calendar.MINUTE, 55);
                     cal4.add(Calendar.DATE, rest4);
-                    r4 = sdf.format(cal4.getTime());
+                    r4 = day.format(cal4.getTime()).replaceFirst("^0+(?!$)", "");
+                    r4 += "/" + mon.format(cal4.getTime()).replaceFirst("^0+(?!$)", "");
+                    r4 += "-" + year.format(cal4.getTime()).replaceFirst("^0+(?!$)", "");
                     break;
                 case 4:
                     cal5.set(Calendar.DAY_OF_MONTH, date);
@@ -209,7 +219,9 @@ public class RestrictionFragment extends Fragment {
                     cal5.set(Calendar.HOUR_OF_DAY, 11);
                     cal5.set(Calendar.MINUTE, 55);
                     cal5.add(Calendar.DATE, rest5);
-                    r5 = sdf.format(cal5.getTime());
+                    r5 = day.format(cal5.getTime()).replaceFirst("^0+(?!$)", "");
+                    r5 += "/" + mon.format(cal5.getTime()).replaceFirst("^0+(?!$)", "");
+                    r5 += "-" + year.format(cal5.getTime()).replaceFirst("^0+(?!$)", "");
                     break;
                 case 5:
                     cal6.set(Calendar.DAY_OF_MONTH, date);
@@ -217,7 +229,9 @@ public class RestrictionFragment extends Fragment {
                     cal6.set(Calendar.HOUR_OF_DAY, 11);
                     cal6.set(Calendar.MINUTE, 55);
                     cal6.add(Calendar.DATE, rest6);
-                    r6 = sdf.format(cal6.getTime());
+                    r6 = day.format(cal6.getTime()).replaceFirst("^0+(?!$)", "");
+                    r6 += "/" + mon.format(cal6.getTime()).replaceFirst("^0+(?!$)", "");
+                    r6 += "-" + year.format(cal6.getTime()).replaceFirst("^0+(?!$)", "");
                     break;
             }
         }
