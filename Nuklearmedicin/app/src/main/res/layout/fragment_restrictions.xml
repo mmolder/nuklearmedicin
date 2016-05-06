@@ -58,18 +58,17 @@
                     android:text="1. Undvik nära kontakt med vuxna personer t.o.m."
                     android:onClick="restrictionButtonClick"
                     android:clickable="true"
-                    android:textSize="11dp"
+                    android:textSize="12dp"
                     android:textColor="#000000"
                     android:layout_marginBottom="20dp"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text=""
                     android:id="@+id/r1"
-                    android:paddingRight="10dp"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="11dp"/>
+                    android:gravity="right"
+                    android:textSize="12dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -82,18 +81,17 @@
                     android:text="2. Undvik nära kontakt med barn och gravida t.o.m."
                     android:onClick="restrictionButtonClick"
                     android:clickable="true"
-                    android:textSize="11dp"
+                    android:textSize="12dp"
                     android:textColor="#000000"
                     android:layout_marginBottom="20dp"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text=""
                     android:id="@+id/r2"
-                    android:paddingRight="10dp"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="11dp"/>
+                    android:gravity="right"
+                    android:textSize="12dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,18 +104,17 @@
                     android:text="3. Stanna hemma från arbetet t.o.m."
                     android:onClick="restrictionButtonClick"
                     android:clickable="true"
-                    android:textSize="11dp"
+                    android:textSize="12dp"
                     android:textColor="#000000"
                     android:layout_marginBottom="20dp"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text=""
                     android:id="@+id/r3"
-                    android:paddingRight="10dp"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="11dp"/>
+                    android:gravity="right"
+                    android:textSize="12dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -130,18 +127,17 @@
                     android:text="4. Vänta med bio- och teaterbesök t.o.m."
                     android:onClick="restrictionButtonClick"
                     android:clickable="true"
-                    android:textSize="11dp"
+                    android:textSize="12dp"
                     android:textColor="#000000"
                     android:layout_marginBottom="20dp"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text=""
                     android:id="@+id/r4"
-                    android:paddingRight="10dp"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="11dp"/>
+                    android:gravity="right"
+                    android:textSize="12dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -154,18 +150,17 @@
                     android:text="5. Undvik långa resor med tåg, buss och flyg t.o.m."
                     android:onClick="restrictionButtonClick"
                     android:clickable="true"
-                    android:textSize="11dp"
+                    android:textSize="12dp"
                     android:textColor="#000000"
                     android:layout_marginBottom="20dp"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text=""
                     android:id="@+id/r5"
-                    android:paddingRight="10dp"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="11dp"/>
+                    android:gravity="right"
+                    android:textSize="12dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -175,19 +170,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/rest6"
-                    android:text="6. Var extra noga med hygienen vid t.ex. toalettbesök t.o.m."
+                    android:text="6. Var noga med hygienen vid t.ex. toalettbesök t.o.m."
                     android:onClick="restrictionButtonClick"
                     android:clickable="true"
-                    android:textSize="11dp"
+                    android:textSize="12dp"
                     android:textColor="#000000"/>
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text=""
                     android:id="@+id/r6"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="11dp"/>
+                    android:gravity="right"
+                    android:textSize="12dp"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -199,7 +194,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/desc_yellowcard2"
                 android:layout_marginTop="10dp"
-                android:textSize="15dp"/>
+                android:textSize="15dp"
+                android:layout_marginBottom="70dp"/>
         </LinearLayout>
 
     </LinearLayout>
