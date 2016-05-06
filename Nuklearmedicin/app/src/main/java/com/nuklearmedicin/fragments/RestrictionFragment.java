@@ -107,7 +107,7 @@ public class RestrictionFragment extends Fragment {
                             @Override
                             public void onClick(View v) {
                                 /* if no user input, show error */
-                                if(TextUtils.isEmpty(userInput.getText().toString())){
+                                if(userInput.getText().toString().length() != 8){
                                     userInput.setError("Ej giltig kod!");
                                 }
                                 /* ok user input, proceed */
@@ -129,7 +129,6 @@ public class RestrictionFragment extends Fragment {
                                     }
                                     ((MainActivity)getActivity()).setAlarm(cal1, 1);
                                     ((MainActivity)getActivity()).setAlarm(cal2, 2);
-                                    Toast.makeText(getContext(),"Alarm set", Toast.LENGTH_LONG).show();
                                 }
                             }
                         });
