@@ -50,7 +50,7 @@ public class AfterFragment extends Fragment {
         TextView rest6 = (TextView) rootView.findViewById(R.id.rest_6);
 
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/myfont.ttf");
-        title.setTypeface(font);
+        //title.setTypeface(font);
 
         HandleXml handleXml = new HandleXml();
         String restarray[] = handleXml.getContent(getContext(), 7, "After");

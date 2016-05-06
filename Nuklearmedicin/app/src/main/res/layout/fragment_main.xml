@@ -13,11 +13,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Nuklearmedicin"
+            android:text="Behandlingsinformation"
             android:textSize="35dp"
             android:id="@+id/textView2"
             android:layout_gravity="center_horizontal"
-            android:paddingTop="50dp" />
+            android:paddingTop="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,7 +25,8 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/intro"
             android:layout_gravity="center_horizontal"
-            android:paddingTop="10dp" />
+            android:paddingTop="10dp"
+            android:textSize="18dp"/>
 
         <Button
             android:layout_width="281dp"
@@ -38,7 +39,7 @@
             android:onClick="mainFragmentButtonClick"
             android:backgroundTint="#1f92b6"
             android:background="@drawable/button_corners"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="25dp"
             android:layout_marginBottom="10dp" />
 
         <Button

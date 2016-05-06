@@ -24,13 +24,14 @@
             android:text="Mina restriktioner"
             android:id="@+id/textView3"
             android:layout_gravity="center_horizontal|top"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="10dp"
+            android:textSize="35dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/desc_yellowcard"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:paddingTop="10dp"
             android:layout_marginBottom="15dp"
             android:textSize="15dp"/>
         </LinearLayout>
