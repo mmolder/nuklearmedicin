@@ -663,4 +663,118 @@ public class MainActivity extends AppCompatActivity
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
         alarmManager.set(AlarmManager.RTC_WAKEUP, targetCal.getTimeInMillis(), PendingIntent.getBroadcast(this, rest, intent, 0));
     }
+
+    public void cancelAlarm(){
+        Intent intent = new Intent(getBaseContext(), AlertReceiver.class);
+        PendingIntent pendingIntent;
+        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        for(int i = 1; i < 7; i++) {
+            pendingIntent = PendingIntent.getBroadcast(getBaseContext(), i, intent, 0);
+            alarmManager.cancel(pendingIntent);
+        }
+    }
+
+    /* open file from phone memory and get user code if present */
+    public void readFromMemory(){
+        try {
+            String code;
+            FileInputStream fileInputStream = getApplicationContext().openFileInput("user_code");
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            StringBuffer stringBuffer = new StringBuffer();
+            while((code = bufferedReader.readLine()) != null){
+                stringBuffer.append(code + "\n");
+            }
+
+            /* parse the code and display in textviews */
+            parseUserInput(stringBuffer.toString());
+        } catch (FileNotFoundException e) {
+
+        } catch (IOException e) {
+
+        }
+    }
+
+    Calendar cal1 = Calendar.getInstance();
+    Calendar cal2 = Calendar.getInstance();
+    Calendar cal3 = Calendar.getInstance();
+    Calendar cal4 = Calendar.getInstance();
+    Calendar cal5 = Calendar.getInstance();
+    Calendar cal6 = Calendar.getInstance();
+
+    /* parse the user input and display in textviews */
+    public void parseUserInput(String input) {
+        int date, month, rest1, rest2, rest3, rest4, rest5, rest6, i;
+        int[] restArray = new int[input.length()];
+        int j = input.length();
+
+        for(i = 0; i < j; i++) {
+            try {
+                restArray[i] = Integer.parseInt(String.valueOf(input.charAt(i)), 36);
+            }  catch (NumberFormatException n){}
+        }
+
+        date = restArray[0];
+        month = restArray[1];
+        rest1 = restArray[2];
+        rest2 = restArray[3];
+        rest3 = restArray[4];
+        rest4 = restArray[5];
+        rest5 = restArray[6];
+        rest6 = restArray[7];
+
+        for(i = 0; i < 6; i++){
+            switch (i){
+                case 0:
+                    cal1.set(Calendar.DAY_OF_MONTH, date);
+                    cal1.set(Calendar.MONTH, month-1);
+                    cal1.set(Calendar.HOUR_OF_DAY, 11);
+                    cal1.set(Calendar.MINUTE, 55);
+                    cal1.add(Calendar.DATE, rest1);
+                    break;
+                case 1:
+                    cal2.set(Calendar.DAY_OF_MONTH, date);
+                    cal2.set(Calendar.MONTH, month-1);
+                    cal2.set(Calendar.HOUR_OF_DAY, 11);
+                    cal2.set(Calendar.MINUTE, 55);
+                    cal2.add(Calendar.DATE, rest2);
+                    break;
+                case 2:
+                    cal3.set(Calendar.DAY_OF_MONTH, date);
+                    cal3.set(Calendar.MONTH, month-1);
+                    cal3.set(Calendar.HOUR_OF_DAY, 11);
+                    cal3.set(Calendar.MINUTE, 55);
+                    cal3.add(Calendar.DATE, rest3);
+                    break;
+                case 3:
+                    cal4.set(Calendar.DAY_OF_MONTH, date);
+                    cal4.set(Calendar.MONTH, month-1);
+                    cal4.set(Calendar.HOUR_OF_DAY, 11);
+                    cal4.set(Calendar.MINUTE, 55);
+                    cal4.add(Calendar.DATE, rest4);
+                    break;
+                case 4:
+                    cal5.set(Calendar.DAY_OF_MONTH, date);
+                    cal5.set(Calendar.MONTH, month-1);
+                    cal5.set(Calendar.HOUR_OF_DAY, 11);
+                    cal5.set(Calendar.MINUTE, 55);
+                    cal5.add(Calendar.DATE, rest5);
+                    break;
+                case 5:
+                    cal6.set(Calendar.DAY_OF_MONTH, date);
+                    cal6.set(Calendar.MONTH, month-1);
+                    cal6.set(Calendar.HOUR_OF_DAY, 11);
+                    cal6.set(Calendar.MINUTE, 55);
+                    cal6.add(Calendar.DATE, rest6);
+                    break;
+            }
+        }
+
+        setAlarm(cal1, 1);
+        setAlarm(cal2, 2);
+        setAlarm(cal3, 3);
+        setAlarm(cal4, 4);
+        setAlarm(cal5, 5);
+        setAlarm(cal6, 6);
+    }
 }

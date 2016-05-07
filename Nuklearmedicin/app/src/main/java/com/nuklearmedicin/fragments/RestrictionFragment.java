@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -114,7 +115,7 @@ public class RestrictionFragment extends Fragment {
                                 /* ok user input, proceed */
                                 else {
                                     TextView test = (TextView) rootView.findViewById(R.id.test);
-                                    test.setText(userInput.getText());
+                                    //test.setText(userInput.getText());
 
                                     /* save user input to file in phone memory */
                                     try {
