@@ -4,6 +4,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,7 +21,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.nuklearmedicin.fragments.AboutFragment;
@@ -32,13 +35,17 @@ import com.nuklearmedicin.fragments.MainFragment;
 import com.nuklearmedicin.fragments.RestrictionFragment;
 import com.nuklearmedicin.fragments.SettingsFragment;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    ArrayList<PendingIntent> intentArray = new ArrayList<PendingIntent>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,17 +53,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        /*
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        */
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -73,8 +69,6 @@ public class MainActivity extends AppCompatActivity
 
         /* Hide the title on the action bar */
         getSupportActionBar().setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
-
-
     }
 
     @Override
@@ -409,7 +403,6 @@ public class MainActivity extends AppCompatActivity
                     slide_down(this, rest_2_content);
                 }
                 break;
-            /* TODO : fix rest of button presses */
             case R.id.rest_3:
                 TextView rest_3_content = (TextView) findViewById(R.id.rest_3_content);
                 TextView rest_3 = (TextView) findViewById(R.id.rest_3);
