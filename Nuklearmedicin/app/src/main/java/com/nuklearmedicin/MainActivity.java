@@ -229,7 +229,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     pregant.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    pregant.setBackgroundResource(R.drawable.button_corners);
+                    pregant.setBackgroundResource(R.drawable.dropdown_1_round);
                     /* hide content */
                     pregnant_info.setVisibility(View.GONE);
                 }
@@ -242,7 +242,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     pregant.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    pregant.setBackgroundResource(R.drawable.rest_corner);
+                    pregant.setBackgroundResource(R.drawable.dropdown_1_edge);
                     /* slide down animation */
                     slide_down(this, pregnant_info);
                 }
@@ -260,7 +260,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     medic.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    medic.setBackgroundResource(R.drawable.button_corners);
+                    medic.setBackgroundResource(R.drawable.dropdown_2_round);
                     /* hide content */
                     medic_info.setVisibility(View.GONE);
                 }
@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     medic.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    medic.setBackgroundResource(R.drawable.rest_corner);
+                    medic.setBackgroundResource(R.drawable.dropdown_2_edge);
                     /* slide down animation */
                     slide_down(this, medic_info);
                 }
@@ -291,7 +291,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     earlier.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    earlier.setBackgroundResource(R.drawable.button_corners);
+                    earlier.setBackgroundResource(R.drawable.dropdown_3_round);
                     /* hide content */
                     earlier_info.setVisibility(View.GONE);
                 }
@@ -304,7 +304,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     earlier.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    earlier.setBackgroundResource(R.drawable.rest_corner);
+                    earlier.setBackgroundResource(R.drawable.dropdown_3_edge);
                     /* slide down animation */
                     slide_down(this, earlier_info);
                 }
@@ -322,7 +322,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     other.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    other.setBackgroundResource(R.drawable.button_corners);
+                    other.setBackgroundResource(R.drawable.dropdown_4_round);
                     /* hide content */
                     other_info.setVisibility(View.GONE);
                 }
@@ -335,7 +335,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     other.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    other.setBackgroundResource(R.drawable.rest_corner);
+                    other.setBackgroundResource(R.drawable.dropdown_4_edge);
                     /* slide down animation */
                     slide_down(this, other_info);
                 }

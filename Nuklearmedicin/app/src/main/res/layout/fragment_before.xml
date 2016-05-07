@@ -8,20 +8,16 @@
         android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal|top"
         android:weightSum="1">
-
         <ScrollView
             android:id="@+id/beforescroll"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:fillViewport="true">
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -29,9 +25,7 @@
                     android:text="Inför behandlingen"
                     android:id="@+id/textView9"
                     android:layout_gravity="center_horizontal"
-                    android:paddingTop="10dp"
-                    android:textSize="35dp"/>
-
+                    android:textSize="30sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -39,8 +33,9 @@
                     android:id="@+id/before_undertitle"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="0.34"
-                    android:paddingTop="10dp"
-                    android:layout_marginBottom="20dp"/>
+                    android:paddingTop="5dp"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
                 <TextView
                     android:id="@+id/pregnant"
                     android:text="Graviditet"
@@ -48,12 +43,11 @@
                     android:onClick="toggle_contents2"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="@drawable/button_corners"
-                    android:backgroundTint="#4472c4"
+                    android:background="@drawable/dropdown_1_round"
                     android:drawableRight="@mipmap/ic_expand_more_white_24dp"
                     android:layout_marginBottom="10dp"
                     android:padding="10dp"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
                 <TextView
@@ -61,11 +55,10 @@
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:background="@drawable/rest_content"
-                    android:backgroundTint="#FFFFFF"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:textSize="20dp" />
+                    android:textSize="15sp" />
                 <TextView
                     android:id="@+id/medic"
                     android:text="Medicinering"
@@ -73,69 +66,63 @@
                     android:onClick="toggle_contents2"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="@drawable/button_corners"
-                    android:backgroundTint="#449bc1"
+                    android:background="@drawable/dropdown_2_round"
                     android:drawableRight="@mipmap/ic_expand_more_white_24dp"
                     android:layout_marginBottom="10dp"
                     android:padding="10dp"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
                 <TextView
                     android:id="@+id/medic_info"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="@drawable/button_corners"
-                    android:backgroundTint="#FFFFFF"
+                    android:background="@drawable/rest_content"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:textSize="20dp" />
+                    android:textSize="15sp" />
                 <TextView  android:id="@+id/earlier"
                     android:text="Tidigare undersökning"
                     android:clickable="true"
                     android:onClick="toggle_contents2"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="@drawable/button_corners"
-                    android:backgroundTint="#43beb9"
+                    android:background="@drawable/dropdown_3_round"
                     android:drawableRight="@mipmap/ic_expand_more_white_24dp"
                     android:layout_marginBottom="10dp"
                     android:padding="10dp"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/earlier_info"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:background="@drawable/rest_content"
-                    android:backgroundTint="#FFFFFF"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:textSize="20dp" />
+                    android:textSize="15sp" />
                 <TextView  android:id="@+id/other"
                     android:text="Övrigt"
                     android:clickable="true"
                     android:onClick="toggle_contents2"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:background="@drawable/button_corners"
-                    android:backgroundTint="#43bb8d"
+                    android:background="@drawable/dropdown_4_round"
                     android:drawableRight="@mipmap/ic_expand_more_white_24dp"
                     android:layout_marginBottom="10dp"
                     android:padding="10dp"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textColor="#FFFFFF"/>
                 <!--content to hide/show -->
                 <TextView  android:id="@+id/other_info"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:background="@drawable/rest_content"
-                    android:backgroundTint="#FFFFFF"
                     android:padding="10dp"
                     android:layout_marginBottom="10dp"
-                    android:textSize="20dp" />
+                    android:textSize="15sp" />
                 </LinearLayout>
             </ScrollView>
     </LinearLayout>
