@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Behandlingsinformation"
-            android:textSize="35dp"
+            android:textSize="35sp"
             android:id="@+id/textView2"
             android:layout_gravity="center_horizontal"
             android:paddingTop="10dp" />
@@ -26,13 +26,13 @@
             android:id="@+id/intro"
             android:layout_gravity="center_horizontal"
             android:paddingTop="10dp"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
         <Button
             android:layout_width="281dp"
             android:layout_height="104dp"
             android:text="Inför"
-            android:textSize="35dp"
+            android:textSize="35sp"
             android:textColor="#FFFFFF"
             android:id="@+id/buttonBefore"
             android:layout_gravity="center_horizontal"
@@ -45,7 +45,7 @@
             android:layout_width="281dp"
             android:layout_height="104dp"
             android:text="Under"
-            android:textSize="35dp"
+            android:textSize="35sp"
             android:textColor="#FFFFFF"
             android:id="@+id/buttonDuring"
             android:layout_gravity="center_horizontal"
@@ -57,7 +57,7 @@
             android:layout_width="281dp"
             android:layout_height="104dp"
             android:text="Efter"
-            android:textSize="35dp"
+            android:textSize="35sp"
             android:textColor="#FFFFFF"
             android:id="@+id/buttonAfter"
             android:layout_gravity="center_horizontal"
