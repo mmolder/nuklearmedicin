@@ -361,7 +361,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     rest_1.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    rest_1.setBackgroundResource(R.drawable.button_corners);
+                    rest_1.setBackgroundResource(R.drawable.dropdown_1_round);
                     /* hide content */
                     rest_1_content.setVisibility(View.GONE);
                 }
@@ -374,7 +374,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     rest_1.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    rest_1.setBackgroundResource(R.drawable.rest_corner);
+                    rest_1.setBackgroundResource(R.drawable.dropdown_1_edge);
                     /* slide down animation */
                     slide_down(this, rest_1_content);
                 }
@@ -391,7 +391,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     rest_2.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    rest_2.setBackgroundResource(R.drawable.button_corners);
+                    rest_2.setBackgroundResource(R.drawable.dropdown_2_round);
                      /* hide content */
                     rest_2_content.setVisibility(View.GONE);
                 }
@@ -404,7 +404,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     rest_2.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    rest_2.setBackgroundResource(R.drawable.rest_corner);
+                    rest_2.setBackgroundResource(R.drawable.dropdown_2_edge);
                     /* slide down animation */
                     slide_down(this, rest_2_content);
                 }
@@ -422,7 +422,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     rest_3.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    rest_3.setBackgroundResource(R.drawable.button_corners);
+                    rest_3.setBackgroundResource(R.drawable.dropdown_3_round);
                      /* hide content */
                     rest_3_content.setVisibility(View.GONE);
                 }
@@ -435,7 +435,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     rest_3.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    rest_3.setBackgroundResource(R.drawable.rest_corner);
+                    rest_3.setBackgroundResource(R.drawable.dropdown_3_edge);
                     /* slide down animation */
                     slide_down(this, rest_3_content);
                 }
@@ -452,7 +452,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     rest_4.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    rest_4.setBackgroundResource(R.drawable.button_corners);
+                    rest_4.setBackgroundResource(R.drawable.dropdown_4_round);
                      /* hide content */
                     rest_4_content.setVisibility(View.GONE);
                 }
@@ -465,7 +465,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     rest_4.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    rest_4.setBackgroundResource(R.drawable.rest_corner);
+                    rest_4.setBackgroundResource(R.drawable.dropdown_4_edge);
                     /* slide down animation */
                     slide_down(this, rest_4_content);
                 }
@@ -482,7 +482,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     rest_5.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    rest_5.setBackgroundResource(R.drawable.button_corners);
+                    rest_5.setBackgroundResource(R.drawable.dropdown_5_corner);
                      /* hide content */
                     rest_5_content.setVisibility(View.GONE);
                 }
@@ -495,7 +495,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     rest_5.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    rest_5.setBackgroundResource(R.drawable.rest_corner);
+                    rest_5.setBackgroundResource(R.drawable.dropdown_5_edge);
                     /* slide down animation */
                     slide_down(this, rest_5_content);
                 }
@@ -512,7 +512,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     rest_6.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    rest_6.setBackgroundResource(R.drawable.button_corners);
+                    rest_6.setBackgroundResource(R.drawable.dropdown_6_corner);
                      /* hide content */
                     rest_6_content.setVisibility(View.GONE);
                 }
@@ -525,7 +525,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     rest_6.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    rest_6.setBackgroundResource(R.drawable.rest_corner);
+                    rest_6.setBackgroundResource(R.drawable.dropdown_6_edge);
                     /* slide down animation */
                     slide_down(this, rest_6_content);
                 }
@@ -552,7 +552,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     during_1.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    during_1.setBackgroundResource(R.drawable.button_corners);
+                    during_1.setBackgroundResource(R.drawable.dropdown_1_round);
                     /* hide content */
                     during_1_content.setVisibility(View.GONE);
                 }
@@ -565,7 +565,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     during_1.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    during_1.setBackgroundResource(R.drawable.rest_corner);
+                    during_1.setBackgroundResource(R.drawable.dropdown_1_edge);
                     /* slide down animation */
                     slide_down(this, during_1_content);
                 }
@@ -582,7 +582,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     during_2.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    during_2.setBackgroundResource(R.drawable.button_corners);
+                    during_2.setBackgroundResource(R.drawable.dropdown_2_round);
                      /* hide content */
                     during_2_content.setVisibility(View.GONE);
                 }
@@ -595,7 +595,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     during_2.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    during_2.setBackgroundResource(R.drawable.rest_corner);
+                    during_2.setBackgroundResource(R.drawable.dropdown_2_edge);
                     /* slide down animation */
                     slide_down(this, during_2_content);
                 }
@@ -612,7 +612,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     during_3.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    during_3.setBackgroundResource(R.drawable.button_corners);
+                    during_3.setBackgroundResource(R.drawable.dropdown_3_round);
                      /* hide content */
                     during_3_content.setVisibility(View.GONE);
                 }
@@ -625,7 +625,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     during_3.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    during_3.setBackgroundResource(R.drawable.rest_corner);
+                    during_3.setBackgroundResource(R.drawable.dropdown_3_edge);
                     /* slide down animation */
                     slide_down(this, during_3_content);
                 }

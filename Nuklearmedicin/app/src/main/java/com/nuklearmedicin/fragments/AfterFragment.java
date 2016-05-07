@@ -103,7 +103,7 @@ public class AfterFragment extends Fragment {
                 /* change icon to arrow up */
                 rest1.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                 /* remove two rounded corners */
-                rest1.setBackgroundResource(R.drawable.rest_corner);
+                rest1.setBackgroundResource(R.drawable.dropdown_1_edge);
                 /* slide down animation */
                 slide_down(getContext(), rest_1_content);
                 rest1.getParent().requestChildFocus(rest1,rest1);
@@ -117,7 +117,7 @@ public class AfterFragment extends Fragment {
                 /* change icon to arrow up */
                 rest2.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                 /* remove two rounded corners */
-                rest2.setBackgroundResource(R.drawable.rest_corner);
+                rest2.setBackgroundResource(R.drawable.dropdown_2_edge);
                 /* slide down animation */
                 slide_down(getContext(), rest_2_content);
                 rest2.getParent().requestChildFocus(rest2,rest2);
@@ -131,7 +131,7 @@ public class AfterFragment extends Fragment {
                 /* change icon to arrow up */
                 rest3.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                 /* remove two rounded corners */
-                rest3.setBackgroundResource(R.drawable.rest_corner);
+                rest3.setBackgroundResource(R.drawable.dropdown_3_edge);
                 /* slide down animation */
                 slide_down(getContext(), rest_3_content);
                 rest_3_content.getParent().requestChildFocus(rest_3_content,rest_3_content);
@@ -145,7 +145,7 @@ public class AfterFragment extends Fragment {
                 /* change icon to arrow up */
                 rest4.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                 /* remove two rounded corners */
-                rest4.setBackgroundResource(R.drawable.rest_corner);
+                rest4.setBackgroundResource(R.drawable.dropdown_4_edge);
                 /* slide down animation */
                 slide_down(getContext(), rest_4_content);
                 rest_4_content.getParent().requestChildFocus(rest_4_content,rest_4_content);
@@ -159,7 +159,7 @@ public class AfterFragment extends Fragment {
                 /* change icon to arrow up */
                 rest5.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                 /* remove two rounded corners */
-                rest5.setBackgroundResource(R.drawable.rest_corner);
+                rest5.setBackgroundResource(R.drawable.dropdown_5_edge);
                 /* slide down animation */
                 slide_down(getContext(), rest_5_content);
                 rest_5_content.getParent().requestChildFocus(rest_5_content,rest_5_content);
@@ -173,7 +173,7 @@ public class AfterFragment extends Fragment {
                 /* change icon to arrow up */
                 rest6.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                 /* remove two rounded corners */
-                rest6.setBackgroundResource(R.drawable.rest_corner);
+                rest6.setBackgroundResource(R.drawable.dropdown_6_edge);
                 /* slide down animation */
                 slide_down(getContext(), rest_6_content);
                 rest_6_content.getParent().requestChildFocus(rest_6_content,rest_6_content);
