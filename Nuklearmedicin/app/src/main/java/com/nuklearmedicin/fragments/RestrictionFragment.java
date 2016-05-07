@@ -3,6 +3,7 @@ package com.nuklearmedicin.fragments;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -147,7 +148,6 @@ public class RestrictionFragment extends Fragment {
         int date, month, rest1, rest2, rest3, rest4, rest5, rest6, i;
         String r1="", r2="", r3="", r4="", r5="", r6="";
         int[] restArray = new int[input.length()];
-
         int j = input.length();
 
         for(i = 0; i < j; i++) {
@@ -169,6 +169,12 @@ public class RestrictionFragment extends Fragment {
         SimpleDateFormat mon = new SimpleDateFormat("MM");
         SimpleDateFormat year = new SimpleDateFormat("yy");
 
+        Calendar cal = Calendar.getInstance();
+        Long currentDate = cal.getTimeInMillis();
+        Long rest1Date = cal.getTimeInMillis(), rest2Date = cal.getTimeInMillis(),
+                rest3Date = cal.getTimeInMillis(), rest4Date = cal.getTimeInMillis(),
+                rest5Date = cal.getTimeInMillis(), rest6Date = cal.getTimeInMillis();
+
         /*cal.set(Calendar.YEAR, cal.get(Calendar.YEAR));*/
 
         for(i = 0; i < 6; i++){
@@ -179,6 +185,7 @@ public class RestrictionFragment extends Fragment {
                     cal1.set(Calendar.HOUR_OF_DAY, 11);
                     cal1.set(Calendar.MINUTE, 55);
                     cal1.add(Calendar.DATE, rest1);
+                    rest1Date = cal1.getTimeInMillis();
                     r1 = day.format(cal1.getTime()).replaceFirst("^0+(?!$)", "");
                     r1 += "/" + mon.format(cal1.getTime()).replaceFirst("^0+(?!$)", "");
                     r1 += "-" + year.format(cal1.getTime()).replaceFirst("^0+(?!$)", "");
@@ -189,6 +196,7 @@ public class RestrictionFragment extends Fragment {
                     cal2.set(Calendar.HOUR_OF_DAY, 11);
                     cal2.set(Calendar.MINUTE, 55);
                     cal2.add(Calendar.DATE, rest2);
+                    rest2Date = cal2.getTimeInMillis();
                     r2 = day.format(cal2.getTime()).replaceFirst("^0+(?!$)", "");
                     r2 += "/" + mon.format(cal2.getTime()).replaceFirst("^0+(?!$)", "");
                     r2 += "-" + year.format(cal2.getTime()).replaceFirst("^0+(?!$)", "");
@@ -199,6 +207,7 @@ public class RestrictionFragment extends Fragment {
                     cal3.set(Calendar.HOUR_OF_DAY, 11);
                     cal3.set(Calendar.MINUTE, 55);
                     cal3.add(Calendar.DATE, rest3);
+                    rest3Date = cal3.getTimeInMillis();
                     r3 = day.format(cal3.getTime()).replaceFirst("^0+(?!$)", "");
                     r3 += "/" + mon.format(cal3.getTime()).replaceFirst("^0+(?!$)", "");
                     r3 += "-" + year.format(cal3.getTime()).replaceFirst("^0+(?!$)", "");
@@ -209,6 +218,7 @@ public class RestrictionFragment extends Fragment {
                     cal4.set(Calendar.HOUR_OF_DAY, 11);
                     cal4.set(Calendar.MINUTE, 55);
                     cal4.add(Calendar.DATE, rest4);
+                    rest4Date = cal4.getTimeInMillis();
                     r4 = day.format(cal4.getTime()).replaceFirst("^0+(?!$)", "");
                     r4 += "/" + mon.format(cal4.getTime()).replaceFirst("^0+(?!$)", "");
                     r4 += "-" + year.format(cal4.getTime()).replaceFirst("^0+(?!$)", "");
@@ -219,6 +229,7 @@ public class RestrictionFragment extends Fragment {
                     cal5.set(Calendar.HOUR_OF_DAY, 11);
                     cal5.set(Calendar.MINUTE, 55);
                     cal5.add(Calendar.DATE, rest5);
+                    rest5Date =cal5.getTimeInMillis();
                     r5 = day.format(cal5.getTime()).replaceFirst("^0+(?!$)", "");
                     r5 += "/" + mon.format(cal5.getTime()).replaceFirst("^0+(?!$)", "");
                     r5 += "-" + year.format(cal5.getTime()).replaceFirst("^0+(?!$)", "");
@@ -229,6 +240,7 @@ public class RestrictionFragment extends Fragment {
                     cal6.set(Calendar.HOUR_OF_DAY, 11);
                     cal6.set(Calendar.MINUTE, 55);
                     cal6.add(Calendar.DATE, rest6);
+                    rest6Date = cal6.getTimeInMillis();
                     r6 = day.format(cal6.getTime()).replaceFirst("^0+(?!$)", "");
                     r6 += "/" + mon.format(cal6.getTime()).replaceFirst("^0+(?!$)", "");
                     r6 += "-" + year.format(cal6.getTime()).replaceFirst("^0+(?!$)", "");
@@ -244,11 +256,29 @@ public class RestrictionFragment extends Fragment {
         TextView tv6 = (TextView) root.findViewById(R.id.r6);
 
         tv1.setText(r1);
+        if(rest1Date < currentDate){
+            tv1.setTextColor(Color.GREEN);
+        }
         tv2.setText(r2);
+        if(rest2Date < currentDate){
+            tv2.setTextColor(Color.GREEN);
+        }
         tv3.setText(r3);
+        if(rest3Date < currentDate){
+            tv3.setTextColor(Color.GREEN);
+        }
         tv4.setText(r4);
+        if(rest4Date < currentDate){
+            tv4.setTextColor(Color.GREEN);
+        }
         tv5.setText(r5);
+        if(rest5Date < currentDate){
+            tv5.setTextColor(Color.GREEN);
+        }
         tv6.setText(r6);
+        if(rest6Date < currentDate){
+            tv6.setTextColor(Color.GREEN);
+        }
 
     }
 
