@@ -14,10 +14,9 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Behandlingsinformation"
-            android:textSize="35sp"
+            android:textSize="30sp"
             android:id="@+id/textView2"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="10dp" />
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,44 +24,56 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/intro"
             android:layout_gravity="center_horizontal"
-            android:paddingTop="10dp"
-            android:textSize="18sp"/>
+            android:paddingTop="5dp"
+            android:textSize="15sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                android:text="Inför"
+                android:textSize="35sp"
+                android:textColor="#FFFFFF"
+                android:id="@+id/buttonBefore"
+                android:layout_gravity="center_horizontal"
+                android:onClick="mainFragmentButtonClick"
+                android:background="@drawable/button_before"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp" />
 
-        <Button
-            android:layout_width="281dp"
-            android:layout_height="104dp"
-            android:text="Inför"
-            android:textSize="35sp"
-            android:textColor="#FFFFFF"
-            android:id="@+id/buttonBefore"
-            android:layout_gravity="center_horizontal"
-            android:onClick="mainFragmentButtonClick"
-            android:background="@drawable/button_before"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="10dp" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                android:text="Under"
+                android:textSize="35sp"
+                android:textColor="#FFFFFF"
+                android:id="@+id/buttonDuring"
+                android:layout_gravity="center_horizontal"
+                android:onClick="mainFragmentButtonClick"
+                android:background="@drawable/button_during"
+                android:layout_marginBottom="10dp" />
 
-        <Button
-            android:layout_width="281dp"
-            android:layout_height="104dp"
-            android:text="Under"
-            android:textSize="35sp"
-            android:textColor="#FFFFFF"
-            android:id="@+id/buttonDuring"
-            android:layout_gravity="center_horizontal"
-            android:onClick="mainFragmentButtonClick"
-            android:background="@drawable/button_during"
-            android:layout_marginBottom="10dp" />
-
-        <Button
-            android:layout_width="281dp"
-            android:layout_height="104dp"
-            android:text="Efter"
-            android:textSize="35sp"
-            android:textColor="#FFFFFF"
-            android:id="@+id/buttonAfter"
-            android:layout_gravity="center_horizontal"
-            android:onClick="mainFragmentButtonClick"
-            android:background="@drawable/button_after"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                android:text="Efter"
+                android:textSize="35sp"
+                android:textColor="#FFFFFF"
+                android:id="@+id/buttonAfter"
+                android:layout_gravity="center_horizontal"
+                android:onClick="mainFragmentButtonClick"
+                android:background="@drawable/button_after"/>
+        </LinearLayout>
     </LinearLayout>
 
 </FrameLayout>
