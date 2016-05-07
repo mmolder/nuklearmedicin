@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Behandlingsinformation"
+            android:textSize="35sp"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/intro"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:textSize="18sp"/>
+
+        <Button
+            android:layout_width="281dp"
+            android:layout_height="104dp"
+            android:text="Inför"
+            android:textSize="35sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/buttonBefore"
+            android:layout_gravity="center_horizontal"
+            android:onClick="mainFragmentButtonClick"
+            android:background="@drawable/button_before"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:layout_width="281dp"
+            android:layout_height="104dp"
+            android:text="Under"
+            android:textSize="35sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/buttonDuring"
+            android:layout_gravity="center_horizontal"
+            android:onClick="mainFragmentButtonClick"
+            android:background="@drawable/button_during"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:layout_width="281dp"
+            android:layout_height="104dp"
+            android:text="Efter"
+            android:textSize="35sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/buttonAfter"
+            android:layout_gravity="center_horizontal"
+            android:onClick="mainFragmentButtonClick"
+            android:background="@drawable/button_after"/>
+    </LinearLayout>
+
+</FrameLayout>
