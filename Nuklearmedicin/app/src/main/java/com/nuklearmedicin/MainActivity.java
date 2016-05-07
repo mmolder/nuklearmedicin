@@ -125,10 +125,13 @@ public class MainActivity extends AppCompatActivity
             navigationView.getMenu().getItem(1).setChecked(true);
             fm.beginTransaction().replace(R.id.content_frame, new RestrictionFragment()).addToBackStack("").commit();
         }else if (id == R.id.nav_contact) {
+            navigationView.getMenu().getItem(2).setChecked(true);
             fm.beginTransaction().replace(R.id.content_frame, new ContactFragment()).addToBackStack("").commit();
         } else if(id == R.id.nav_about) {
+            navigationView.getMenu().getItem(3).setChecked(true);
             fm.beginTransaction().replace(R.id.content_frame, new AboutFragment()).addToBackStack("").commit();
         } else if (id == R.id.nav_settings) {
+            navigationView.getMenu().getItem(4).setChecked(true);
             fm.beginTransaction().replace(R.id.content_frame, new SettingsFragment()).addToBackStack("").commit();
         }
 

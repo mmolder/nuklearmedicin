@@ -16,7 +16,7 @@
             android:title="Kontakt" />
         <item
             android:id="@+id/nav_about"
-            android:icon="@mipmap/ic_add_black_24dp"
+            android:icon="@mipmap/ic_info_outline_black_24dp"
             android:title="Om" />
         <item
             android:id="@+id/nav_settings"
