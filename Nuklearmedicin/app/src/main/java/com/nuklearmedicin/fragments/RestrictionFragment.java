@@ -121,15 +121,19 @@ public class RestrictionFragment extends Fragment {
                                         FileOutputStream fileOutputStream = getContext().openFileOutput("user_code", Context.MODE_PRIVATE);
                                         fileOutputStream.write(userInput.getText().toString().getBytes());
                                         fileOutputStream.close();
-                                        parseUserInput(userInput.getText().toString(), rootView);
                                         dialog.cancel();
                                     } catch (FileNotFoundException e) {
                                         e.printStackTrace();
                                     } catch (IOException e) {
                                         e.printStackTrace();
                                     }
+                                    parseUserInput(userInput.getText().toString(), rootView);
                                     ((MainActivity)getActivity()).setAlarm(cal1, 1);
                                     ((MainActivity)getActivity()).setAlarm(cal2, 2);
+                                    ((MainActivity)getActivity()).setAlarm(cal3, 3);
+                                    ((MainActivity)getActivity()).setAlarm(cal4, 4);
+                                    ((MainActivity)getActivity()).setAlarm(cal5, 5);
+                                    ((MainActivity)getActivity()).setAlarm(cal6, 6);
                                 }
                             }
                         });
@@ -256,28 +260,40 @@ public class RestrictionFragment extends Fragment {
         TextView tv6 = (TextView) root.findViewById(R.id.r6);
 
         tv1.setText(r1);
-        if(rest1Date < currentDate){
+        if(rest1Date < currentDate) {
             tv1.setTextColor(Color.GREEN);
+        } else {
+            tv1.setTextColor(Color.BLACK);
         }
         tv2.setText(r2);
-        if(rest2Date < currentDate){
+        if(rest2Date < currentDate) {
             tv2.setTextColor(Color.GREEN);
+        } else {
+            tv2.setTextColor(Color.BLACK);
         }
         tv3.setText(r3);
-        if(rest3Date < currentDate){
+        if(rest3Date < currentDate) {
             tv3.setTextColor(Color.GREEN);
+        } else {
+            tv3.setTextColor(Color.BLACK);
         }
         tv4.setText(r4);
-        if(rest4Date < currentDate){
+        if(rest4Date < currentDate) {
             tv4.setTextColor(Color.GREEN);
+        } else {
+            tv4.setTextColor(Color.BLACK);
         }
         tv5.setText(r5);
-        if(rest5Date < currentDate){
+        if(rest5Date < currentDate) {
             tv5.setTextColor(Color.GREEN);
+        } else {
+            tv5.setTextColor(Color.BLACK);
         }
         tv6.setText(r6);
-        if(rest6Date < currentDate){
+        if(rest6Date < currentDate) {
             tv6.setTextColor(Color.GREEN);
+        } else {
+            tv6.setTextColor(Color.BLACK);
         }
 
     }
