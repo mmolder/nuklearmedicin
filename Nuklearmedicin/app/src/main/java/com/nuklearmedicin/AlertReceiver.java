@@ -27,30 +27,30 @@ public class AlertReceiver extends BroadcastReceiver {
         } else if(extra.getInt("rest") == 2){
             title = "Restriktion 2 har nu löpt ut";
             ticker = "Alert!";
-            content = "Sluta upp med...";
+            content = "";
             rest = 2;
         } else if(extra.getInt("rest") == 3){
             title = "Restriktion 3 har nu löpt ut";
             ticker = "Alert!";
-            content = "Hjääälp!!!!";
+            content = "";
             rest = 3;
         } else if(extra.getInt("rest") == 4){
             title = "Restriktion 4 har nu löpt ut";
             ticker = "Alert!";
-            content = "Lägg ner!";
+            content = "";
             rest = 4;
         } else if(extra.getInt("rest") == 5){
             title = "Restriktion 5 har nu löpt ut";
             ticker = "Alert!";
-            content = "Res på!";
+            content = "";
             rest = 5;
         } else if(extra.getInt("rest") == 6){
             title = "Restriktion 6 har nu löpt ut";
             ticker = "Alert!";
-            content = "Toalett";
+            content = "";
             rest = 6;
         } else {
-            title = "Ingen av dem";
+            title = "Unknown alert";
             ticker = "Alert!";
             content = extra.getString("rest");
         }

@@ -45,10 +45,10 @@ public class SettingsFragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     /* turn notifications on */
-                    ((MainActivity)getActivity()).readFromMemory();
+                    //((MainActivity)getActivity()).readFromMemory();
                 } else {
                     /* turn notifications off */
-                    ((MainActivity)getActivity()).cancelAlarm();
+                    //((MainActivity)getActivity()).cancelAlarm();
                 }
             }
         });
