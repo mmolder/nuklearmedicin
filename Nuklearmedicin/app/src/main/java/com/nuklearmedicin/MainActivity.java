@@ -210,6 +210,37 @@ public class MainActivity extends AppCompatActivity
         Drawable arrowUp = getResources().getDrawable(R.mipmap.ic_expand_less_white_24dp);
         Drawable arrowDown = getResources().getDrawable(R.mipmap.ic_expand_more_white_24dp);
         switch(v.getId()){
+            case R.id.diagnose:
+                TextView diagnose_content = (TextView) findViewById(R.id.diagnose_info);
+                TextView diagnose = (TextView) findViewById(R.id.diagnose);
+
+                if(diagnose_content.isShown()){
+                    /* slide up animation */
+                    slide_up(this, diagnose_content);
+                    /* set bottom margin */
+                    llp.setMargins(0,0,0,20);
+                    diagnose.setLayoutParams(llp);
+                    /* change icon to arrow down */
+                    diagnose.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
+                    /* change all corners to rounded */
+                    diagnose.setBackgroundResource(R.drawable.dropdown_1_round);
+                    /* hide content */
+                    diagnose_content.setVisibility(View.GONE);
+                }
+                else{
+                    /* show content */
+                    diagnose_content.setVisibility(View.VISIBLE);
+                    /* set all margins to 0 */
+                    llp.setMargins(0,0,0,0);
+                    diagnose.setLayoutParams(llp);
+                    /* change icon to arrow up */
+                    diagnose.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
+                    /* remove two rounded corners */
+                    diagnose.setBackgroundResource(R.drawable.dropdown_1_edge);
+                    /* slide down animation */
+                    slide_down(this, diagnose_content);
+                }
+                break;
             case R.id.pregnant:
                 TextView pregnant_info = (TextView) findViewById(R.id.pregnant_info);
                 TextView pregant = (TextView) findViewById(R.id.pregnant);
@@ -223,7 +254,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     pregant.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    pregant.setBackgroundResource(R.drawable.dropdown_1_round);
+                    pregant.setBackgroundResource(R.drawable.dropdown_2_round);
                     /* hide content */
                     pregnant_info.setVisibility(View.GONE);
                 }
@@ -236,7 +267,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     pregant.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    pregant.setBackgroundResource(R.drawable.dropdown_1_edge);
+                    pregant.setBackgroundResource(R.drawable.dropdown_2_edge);
                     /* slide down animation */
                     slide_down(this, pregnant_info);
                 }
@@ -254,7 +285,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     medic.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    medic.setBackgroundResource(R.drawable.dropdown_2_round);
+                    medic.setBackgroundResource(R.drawable.dropdown_3_round);
                     /* hide content */
                     medic_info.setVisibility(View.GONE);
                 }
@@ -267,7 +298,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     medic.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    medic.setBackgroundResource(R.drawable.dropdown_2_edge);
+                    medic.setBackgroundResource(R.drawable.dropdown_3_edge);
                     /* slide down animation */
                     slide_down(this, medic_info);
                 }
@@ -285,7 +316,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     earlier.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    earlier.setBackgroundResource(R.drawable.dropdown_3_round);
+                    earlier.setBackgroundResource(R.drawable.dropdown_4_round);
                     /* hide content */
                     earlier_info.setVisibility(View.GONE);
                 }
@@ -298,7 +329,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     earlier.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    earlier.setBackgroundResource(R.drawable.dropdown_3_edge);
+                    earlier.setBackgroundResource(R.drawable.dropdown_4_edge);
                     /* slide down animation */
                     slide_down(this, earlier_info);
                 }
@@ -316,7 +347,7 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow down */
                     other.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowDown,null);
                     /* change all corners to rounded */
-                    other.setBackgroundResource(R.drawable.dropdown_4_round);
+                    other.setBackgroundResource(R.drawable.dropdown_5_corner);
                     /* hide content */
                     other_info.setVisibility(View.GONE);
                 }
@@ -329,11 +360,12 @@ public class MainActivity extends AppCompatActivity
                     /* change icon to arrow up */
                     other.setCompoundDrawablesWithIntrinsicBounds(null,null,arrowUp,null);
                     /* remove two rounded corners */
-                    other.setBackgroundResource(R.drawable.dropdown_4_edge);
+                    other.setBackgroundResource(R.drawable.dropdown_5_edge);
                     /* slide down animation */
                     slide_down(this, other_info);
                 }
                 break;
+
     }}
 
     /* handle button clicks from after fragment */
@@ -664,6 +696,7 @@ public class MainActivity extends AppCompatActivity
         alarmManager.set(AlarmManager.RTC_WAKEUP, targetCal.getTimeInMillis(), PendingIntent.getBroadcast(this, rest, intent, 0));
     }
 
+    /*
     public void cancelAlarm(){
         Intent intent = new Intent(getBaseContext(), AlertReceiver.class);
         PendingIntent pendingIntent;
@@ -673,6 +706,7 @@ public class MainActivity extends AppCompatActivity
             alarmManager.cancel(pendingIntent);
         }
     }
+    */
 
     /* open file from phone memory and get user code if present */
     public void readFromMemory(){

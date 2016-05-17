@@ -52,6 +52,7 @@ public class HandleXml {
                 expr[2] = "/content/before/earlier";
                 expr[3] = "/content/before/other";
                 expr[4] = "/content/before/undertitle";
+                expr[5] = "/content/before/diagnose";
                 break;
             case "During":
                 expr[0] = "/content/during/desc";
