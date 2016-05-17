@@ -54,7 +54,7 @@
                     android:layout_marginBottom="10dp"
                     android:textSize="15sp" />
                 <TextView  android:id="@+id/during_2"
-                    android:text="Under behandlingen"
+                    android:text="Läkemedlet"
                     android:clickable="true"
                     android:onClick="toggle_contents_3"
                     android:layout_height="wrap_content"
