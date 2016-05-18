@@ -39,5 +39,10 @@
     <about>
         <text>Strålande är applikationen som vägleder dig genom din radiojodbehandling. I applikationen har information kring förberedelser, behandling och efterföljande restriktioner samlats på ett lättöverskådligt sätt.\n\nInformationen är framtagen i sammarbete med avdelningen för Nuklearmedicin på Karolinska Universitetssjukhuset i Solna och utvecklingen har skett i samband med ett kandidatexamensarbete vid Kungliga Tekniska Högskolan i Stockholm. Applikationen behandlar ingen personlig information vilket innebär att alla användare är anonyma.</text>
     </about>
+    <contact>
+        <title>Endokrinmottagningen</title>
+        <address>Karolinska Universitetssjukhuset, Solna\nD2:03, Stockholm</address>
+        <phone>Telefon: +46851772114</phone>
+    </contact>
 </content>
 

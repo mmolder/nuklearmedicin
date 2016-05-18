@@ -75,6 +75,12 @@ public class HandleXml {
                 break;
             case "About":
                 expr[0] = "/content/about/text";
+                break;
+            case "Contact":
+                expr[0] = "/content/contact/title";
+                expr[1] = "/content/contact/address";
+                expr[2] = "/content/contact/phone";
+                break;
         }
         Node node = null;
 
