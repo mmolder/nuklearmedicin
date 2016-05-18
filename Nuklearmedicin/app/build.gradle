@@ -18,6 +18,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    signingConfigs {
+        release {
+            storeFile file("C:/Kexjobb/Kexjobb/nuklearmedicin_keystore/myreleasekey.jks")
+            storePassword "nuklearmedicin"
+            keyAlias "nuklearmedicinkeystore"
+            keyPassword "nuklearmedicin"
+        }
+    }
 }
 
 dependencies {
